@@ -437,7 +437,7 @@
 }
 /****************************************/
 .summer_sale_BG .disscount_bannar_img{
-    background-image: url('./../assets/summer_sale_BG/DiscountBannar.webp');
+    background-image: url('./assets/summer_sale_BG/DiscountBannar.webp');
     padding: 50px 0;
     border-radius: 10px;
     background-size: cover;
@@ -864,6 +864,16 @@
 .team .social i:hover{
     color: #ffffff;
     background-color: #00B207;
+}
+/* ========================Contact Page Code============================== */
+.form-control:hover {
+  border-color: #00B207;
+  box-shadow: 0 0 0 0.2rem rgba(69, 230, 107, 0.25);
+  transition: all 0.3s ease;
+}
+.form-control:focus {
+  border-color: #00B207;
+  box-shadow: 0 0 0 0.2rem rgba(69, 230, 107, 0.25);
 }
 
 
