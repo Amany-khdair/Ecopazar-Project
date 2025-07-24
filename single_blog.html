@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Ecobazar</title>
+    <!-- Bootstrab 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <header class="header">    
+        <!---------------Top Bar--------------------->
+        <div class="py-2 border-bottom bg-white">
+            <div class="container">
+                <div class="row align-items-center justify-content-between font-poppins top-bar">
+                    <div class="col-md-6">
+                        <div class=" d-flex align-items-center">                    
+                            <img src="./assets/general/MapPin.webp" alt="Location Icon" width="15" height="18" class="me-2">
+                            <span class="location">
+                                Store Location: Lincoln-344, Illinois, Chicago, USA
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="d-flex justify-content-md-end justify-content-center align-items-center gap-3">
+                            <li class="nav-item dropdown list-unstyled">
+                                <a class="nav-link dropdown-toggle me-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    ENG
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">ENG</a></li>
+                                    <li><a class="dropdown-item" href="#">AR</a></li>                                
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown list-unstyled">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    USD
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">USD</a></li>
+                                    <li><a class="dropdown-item" href="#">NIS</a></li>                               
+                                </ul>
+                            </li>
+                            <div class="sign border-start ps-3">
+                                <a href="#" class="ms-2 me-1 text-decoration-none bar-color">Sign In</a> /
+                                <a href="#" class="ms-1 text-decoration-none bar-color">Sign Up</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>                    
+    </header>
+    <!-------------------------------------------------------->
+    <nav class="navbar navbar-expand-lg bg-white py-3 border-bottom position-sticky top-0" style="z-index: 5;">
+        <div class="container font-poppins">                
+            <div class="logo">
+                <a class="navbar-brand fw-bold" href="./index.html">
+                    <img src="./assets/general/Logo.webp" alt="Ecobazar Logo" class="me-2">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-content d-flex flex-wrap justify-content-between align-items-center w-100 gap-3"> 
+                    <div class="search-parent flex-grow-1 mx-3">
+                        <form class="d-flex justify-content-center flex-wrap" role="search">
+                            <div class="search-form d-flex position-relative">
+                                <img src="./assets/general/Search.webp" alt="Search" class="search-icon">
+                                <input class="search-input form-control form-control-sm border-0" type="search" placeholder="Search" aria-label="Search" />
+                                <button class="btn border-0" type="submit">Search</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="user-interaction-icons d-flex align-items-center gap-3">
+                        <a href="./wishlist.html" target="_blank" class="wish-icon border-end pe-3">
+                            <img src="./assets/general/Heart.webp" alt="Wishlist">
+                        </a> 
+                        
+                        <a  class="cart-icon d-flex align-items-center notification position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                            <img src="./assets/general/cart.webp" alt="Shopping Cart">
+                        </a>
+
+                        <div class="shopping-info d-flex flex-column">
+                            <span class="shopping-cart">Shopping cart:</span>
+                            <span class="price fw-medium">$57.00</span>
+                        </div>
+                    </div>
+                </div>  
+            </div>    
+        </div>            
+    </nav>
+    
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Shopping Card (2)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column h-100">
+            <div class="card mb-1" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="off_img_body col-md-3 col-sm-3">
+                        <img src="./assets/popular_products/FreshIndianMalta.webp" class="offcanvas_img img-fluid rounded-start" alt="Fresh Indian Malta">
+                    </div>
+                    <div class="col-md-9 col-sm-9">
+                        <div class="card-body font-poppins d-flex justify-content-between">
+                            <div class="cart_content_offcanvas">
+                                <h5 class="card-title fw-normal">Fresh Indian Orange</h5>
+                                <p class="card-text"><span class="text-secondary">1 kg x </span>12.00</p>
+                            </div>                        
+                            <div class="close_btn">
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" disabled aria-label="Close"></button>  
+                            </div>                                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="off_img_body col-md-3 col-sm-3">
+                        <img src="./assets/popular_products/greenApple.webp" class="offcanvas_img img-fluid rounded-start" alt="Green Apple">
+                    </div>
+                    <div class="col-md-9 col-sm-9">
+                        <div class="card-body font-poppins d-flex justify-content-between">
+                            <div class="cart_content_offcanvas">
+                                <h5 class="card-title fw-normal">Fresh Indian Orange</h5>
+                                <p class="card-text"><span class="text-secondary">1 kg x </span>14.00</p>
+                            </div>                        
+                            <div class="close_btn">
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" disabled aria-label="Close"></button>  
+                            </div>                                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-top pt-3 mt-auto">
+                <div class="card p-3 border-0 w-100">
+                    <div class="d-flex justify-content-between mb-3">
+                        <span class="fw-normal">2 Products</span>
+                        <span class="fw-semibold text-dark">$26.00</span>
+                    </div>
+                    <div class="offCanvas_btns d-flex flex-column gap-2">
+                        <a href="#" target="_blank" class="btn checkout_btn bg_mainColor text-white rounded-pill fw-semibold">Checkout</a>
+                        <a href="#" target="_blank" class="btn go_cart_btn text_mainColor rounded-pill fw-semibold">Go To Cart</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <nav class="list-navbar navbar navbar-expand-lg bg-dark navbar-dark position-sticky" data-bs-theme="dark" style="top: 62px; z-index: 4;">
+        <div class="container font-poppins">                                
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" href="./shop.html">Shop</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" href="#">Pages</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" href="./blog.html">Blog</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" href="./aboutUs.html">About Us</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" href="#">Contact Us</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                </ul>
+                <span class="navbar-text text-white">
+                    <img src="./assets/general/PhoneCall.webp" alt="Phone Call Icon">
+                    (219) 555-0114
+                </span>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
+        <section class="single_blog">
+            <div class="single_blogs_header py-4">   
+                <div class="container d-flex flex-row align-items-center gap-2 font-poppins">
+                    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb"
+                        aria-label="breadcrumb">
+                        <ol class="breadcrumb d-flex flex-row align-items-center gap-2 mb-0">
+                            <li class="breadcrumb-item d-flex align-items-center">
+                                <a href="./index.html">
+                                    <img src="./assets/wishlist_page/home_icon.webp" alt="Home Icon" style="width: 20px; height: 20px;" />
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item active d-flex align-items-center" aria-current="page">
+                                <a href="./blog.html" class="fw-normal font-poppins text-secondary mt-1 text-decoration-none" style="font-size: 1rem;">Blog</a>
+                            </li>                            
+                            <li class="breadcrumb-item active d-flex align-items-center" aria-current="page">
+                                <span class="fw-normal font-poppins text_mainColor mt-1" style="font-size: 1rem;">Single Blog</span>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-results py-5">
+            <div class="container font-poppins">
+                <div class="row">                    
+                    <div class="col-lg-8">
+                        <img src="./assets/single_blog_page/single_blog_orange1.webp" class="img-fluid rounded mb-4" alt="Oranges" />
+
+                        <div class="d-flex flex-wrap gap-3 small text-muted mb-2">                                    
+                            <span><img src="./assets/latestNews/food_sign.webp" alt="Aategory"> Food</span>
+                            <span><img src="./assets/latestNews/admin_sign.webp" alt="Author"> By Admin</span>
+                            <span><img src="./assets/latestNews/comment_sign.webp" alt="Comment"> 65 Comments</span>
+                        </div>
+                        <h2 class="fw-medium mb-3">Maecenas tempor urna sed quam mollis, a placerat dui fringill Suspendisse.</h2>
+                        <div class="author_blog">
+                            <div class="d-flex justify-content-between align-items-center my-4">                               
+                                <div class="d-flex flex-row gap-1">
+                                    <img src="./assets/single_blog_page/CameronWilliamson.webp" alt="Cameron Williamson" class="testimonial_img rounded-circle me-3">
+                                    <div class="d-flex flex-column g-5">
+                                        <h6 class="mb-0 fw-medium pt-2">Cameron Williamson</h6>
+                                        <small class="text-secondary fw-normal mt-2">4 April, 2021 • 6 min read</small>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-12 text-center social_single_blog">
+                                    <div class="social">
+                                        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f d-inline-flex align-items-center justify-content-center"></i></a>
+                                        <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter d-inline-flex align-items-center justify-content-center"></i></a>
+                                        <a href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest-p d-inline-flex align-items-center justify-content-center"></i></a>
+                                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram d-inline-flex align-items-center justify-content-center"></i></a>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+
+                        <h5 class="fw-medium pt-3 border-top">Maecenas lacinia felis nec placerat sollicitudin. Quisque placerat dolor at scelerisque imperdiet. Phasellus tristique felis dolor.</h5>
+
+                        <p class="text-secondary fs-6 fw-normal">Maecenas elementum in risus sed condimentum. Duis convallis ante ac tempus maximus. Fusce malesuada sed velit ut dictum. Morbi faucibus vitae orci at euismod. Integer auctor augue in erat vehicula, quis fermentum ex finibus.</p>
+                        <p class="text-secondary fs-6 fw-normal">Mauris pretium elit a dui pulvinar, in ornare sapien euismod. Nullam interdum nisl ante, id feugiat quam euismod commodo. Sed ultrices lectus ut iaculis rhoncus. Aenean non dignissim justo, at fermentum turpis. Sed molestie,
+                             ligula ut molestie ultrices, tellus ligula viverra neque, malesuada consectetur diam sapien volutpat risus. Quisque eget tortor lobortis, facilisis metus eu, elementum est. Nunc sit amet erat quis ex convallis suscipit. ur ridiculus mus.</p>
+
+                        <div class="row g-2 mb-4">
+                            <div class="col-md-6">
+                                <img src="./assets/single_blog_page/single_blog_orange2.webp" alt="Oranges" class="img-fluid rounded" />
+                            </div>
+                            <div class="col-md-6">
+                                <img src="./assets/single_blog_page/single_blog_orange3.webp" alt="Oranges" class="img-fluid rounded" />
+                            </div>
+                        </div>
+                        <p class="text-secondary fs-6 fw-normal">Sed dictum non nulla eu imperdiet. Duis elit libero, vulputate quis vehicula ut, vestibulum ut mauris. Nullam non felis varius dui rutrum rutrum in a nisi. Suspendisse elementum rutrum lorem sed luctus. Proin iaculis euismod 
+                            metus non sollicitudin. Duis vel luctus lacus. Nullam faucibus iaculis convallis. In ullamcorper nibh ipsum, eget lacinia eros pulvinar a. Integer accumsan arcu nec faucibus ultricies.</p>   
+                        
+                        <div class="shop_hero mb-5">
+                            <div class="shop_sale_cards month_sale_card position-relative text-white p-4 ps-5 ms-3 rounded-3">
+                                <div class="position-relative mt-3 z-1">
+                                    <p class="text-secondary small fw-medium text-uppercase mb-1">Summer Sales</p>
+                                    <h2 class="fw-semibold mb-3">Fresh Fruit</h2>
+                                    <span class="badge text-secondary bg-dark position-absolute d-flex flex-column justify-content-center align-items-center gap-1 fw-medium py-2 px-3">
+                                        <span class="text-secondary fs-6">up to</span>
+                                        <span class="text-warning fs-5">56%</span>
+                                        <span class="text-secondary fs-6">off</span>
+                                    </span>
+                                    
+                                    <a href="./shop.html" class="btn btn-outline-success bg_mainColor text-white fw-semibold px-4 py-2 rounded-pill">Shop Now →</a>
+                                </div>
+                                <div class="sales_box position-absolute top-0 start-0 w-100 h-100"></div>
+                            </div>
+                        </div>
+                       
+
+                        <h5 class="fs-5 fw-medium mb-3">Leave a Comment</h5>
+                        <form class="mb-5">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="FullName" class="form-label small">Full Name</label>
+                                <input type="text" id="FullName" class="form-control" placeholder="Zakir Hossen" />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="Email" class="form-label small">Email</label>
+                                <input type="email" id="Email" class="form-control" placeholder="zakirsoft.20@g|" />
+                            </div>
+                            <div class="col-12">
+                                <label for="Message" class="form-label small">Message</label>
+                                <textarea class="form-control" id="Message" rows="3" placeholder="Write your comment here…"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check pb-4">
+                                    <input type="checkbox" id="SaveName" class="form-check-input">
+                                    <label for="SaveName" class="form-check-label small text-muted fw-normal">
+                                        Save my name and email in this browser for the next time I comment.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-outline-success bg_mainColor text-white px-4 rounded-5">Post Comment</button>
+                            </div>
+                        </div>
+                        </form>
+
+                        <div class="comments_section my-5">
+                            <h5 class="fw-medium mb-4">Comments</h5>
+
+                            <div class="border-bottom d-flex flex-row gap-2 pb-3 mb-4">
+                                <img src="./assets/single_blog_page/AnnetteBlack.webp" class="testimonial_img p-2 rounded-circle me-1" alt="Annette Black">
+                                <div>
+                                    <p class="mb-1 fw-medium small text-dark">Annette Black •<span class="text-secondary fw-normal small ms-2">26 Apr, 2021</span></p>
+                                    <p class="mb-0 text-muted small">In a nisi commodo, porttitor ligula consequat, tincidunt dui. Nulla volutpat, metus eu aliquam malesuada, elit libero venenatis urna, consequat maximus arcu diam non diam.</p>
+                                </div>
+                            </div>
+
+                            <div class="border-bottom d-flex flex-row gap-2 pb-3 mb-4">
+                                <img src="./assets/single_blog_page/DevonLane.webp" class="testimonial_img p-2 rounded-circle me-1" alt="Devon Lane">
+                                <div>
+                                    <p class="mb-1 fw-medium small text-dark">Devon Lane •<span class="text-secondary fw-normal small ms-2">24 Apr, 2021</span></p>
+                                    <p class="mb-0 text-muted small">Quisque eget tortor lobortis, facilisis metus eu, elementum est. Nunc sit amet erat quis ex convallis suscipit. Nam hendrerit, velit ut aliquam euismod, nibh tortor rutrum nisi, ac sodales nunc eros porta nisi. Sed scelerisque, est eget aliquam venenatis, est sem tempor eros.</p>
+                                </div>
+                            </div>
+
+                            <div class="border-bottom d-flex flex-row gap-2 pb-3 mb-4">
+                                <img src="./assets/single_blog_page/JacobJones.webp" class="testimonial_img p-2 rounded-circle me-1" alt="Jacob Jones">
+                                <div>
+                                    <p class="mb-1 fw-medium small text-dark">Jacob Jones •<span class="text-secondary fw-normal small ms-2">20 Apr, 2021</span></p>
+                                    <p class="mb-0 text-muted small">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                                </div>
+                            </div>
+
+                            <div class="border-bottom d-flex flex-row gap-2 pb-3 mb-4">
+                                <img src="./assets/single_blog_page/JaneCooper.webp" class="testimonial_img p-2 rounded-circle me-1" alt="Jane Cooper">
+                                <div>
+                                    <p class="mb-1 fw-medium small text-dark">Jane Cooper •<span class="text-secondary fw-normal small ms-2">18 Apr, 2021</span></p>
+                                    <p class="mb-0 text-muted small">Pellentesque feugiat, nibh vel vehicula pretium, nibh nibh bibendum elit, a volutpat arcu dui nec orci. Aenean dui odio, ullamcorper quis turpis ac, volutpat imperdiet ex.</p>
+                                </div>
+                            </div>
+
+                            <div class="border-bottom d-flex flex-row gap-2 pb-3 mb-4">
+                                <img src="./assets/single_blog_page/DarrellSteward.webp" class="testimonial_img p-2 rounded-circle me-1" alt="Darrell Steward">
+                                <div>
+                                    <p class="mb-1 fw-medium small text-dark">Darrell Steward •<span class="text-secondary fw-normal small ms-2">7 Apr, 2021</span></p>
+                                    <p class="mb-0 text-muted small">Nulla molestie interdum ultricies. </p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <button class="btn btn_load_more rounded-pill px-4 py-2 fw-semibold">Load More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">                       
+                        <div class="search-parent flex-grow-1">
+                            <form class="d-flex justify-content-center flex-wrap" role="search">
+                                <div class="search-form w-100 d-flex position-relative">
+                                    <img src="./assets/general/Search.webp" alt="Search" class="search-icon">
+                                    <input class="search-input form-control form-control-sm border-0" type="search" placeholder="Search" aria-label="Search" />                                
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="my-4 border-top">
+                            <h6 class="fw-medium py-3">Top Categories</h6>
+                            <ul class="list-unstyled small d-flex flex-column gap-2">
+                                <li class="d-flex justify-content-between small fw-normal">
+                                    <span class="small fw-normal">Fresh Fruit</span><span class="text-secondary small fw-normal">(134)</span>
+                                </li>
+                                <li class="d-flex justify-content-between small fw-normal">
+                                    <span class="small fw-normal">Vegetables</span><span class="text-secondary small fw-normal">(150)</span>
+                                </li>
+                                <li class="d-flex justify-content-between small fw-normal">
+                                    <span class="small fw-normal">Cooking</span><span class="text-secondary small fw-normal">(54)</span>
+                                </li>
+                                <li class="d-flex justify-content-between small fw-normal">
+                                    <span class="small fw-normal">Snacks</span><span class="text-secondary small fw-normal">(47)</span>
+                                </li>
+                                <li class="d-flex justify-content-between small fw-normal">
+                                    <span class="small fw-normal">Beverages</span><span class="text-secondary small fw-normal">(43)</span>
+                                </li>
+                                <li class="d-flex justify-content-between small fw-normal">
+                                    <span class="small fw-normal">Beauty & Health</span><span class="text-secondary small fw-normal">(38)</span>
+                                </li>
+                                <li class="d-flex justify-content-between small fw-normal">
+                                    <span class="small fw-normal">Bread & Bakery</span><span class="text-secondary small fw-normal">(15)</span>
+                                </li>
+                                
+                            </ul>
+                        </div>
+
+                        <div class="mb-4 border-top">
+                            <h6 class="fw-medium py-3">Popular Tag</h6>
+                            <div class="d-flex flex-wrap gap-1">
+                                <button class="badge pop_tag_badge small fw-normal border-0 rounded-pill p-2 px-2">Healthy</button>
+                                <button class="badge pop_tag_badge small fw-normal border-0 rounded-pill p-2 px-2">Low fat</button>
+                                <button class="badge pop_tag_badge small fw-normal border-0 rounded-pill p-2 px-2">Vegetarian</button>
+                                <button class="badge pop_tag_badge small fw-normal border-0 rounded-pill p-2 px-2">Bread</button>
+                                <button class="badge pop_tag_badge small fw-normal border-0 rounded-pill p-2 px-2">Kids food</button>
+                                <button class="badge pop_tag_badge small fw-normal border-0 rounded-pill p-2 px-2">Vitamins</button>
+                                <button class="badge pop_tag_badge small fw-normal border-0 rounded-pill p-2 px-2">Snacks</button>
+                                <button class="badge pop_tag_badge small fw-normal border-0 rounded-pill p-2 px-2">Tiffin</button>
+                                <button class="badge pop_tag_badge small fw-normal border-0 rounded-pill p-2 px-2">Meat</button>
+                                <button class="badge pop_tag_badge small fw-normal border-0 rounded-pill p-2 px-2">Launch</button>
+                                <button class="badge pop_tag_badge small fw-normal border-0 rounded-pill p-2 px-2">Dinner</button>
+                                
+                                
+                            </div>
+                        </div>
+
+                        <div class="mb-4 border-top">
+                            <h6 class="fw-medium py-3">Our Gallery</h6>
+                            <div class="row g-1">
+                                <div class="col-3">
+                                    <img src="./assets/blog_page/gallery1small.webp" alt="Gallery" class="img-fluid rounded"/>
+                                </div>
+                                <div class="col-3">
+                                    <img src="./assets/blog_page/gallery2small.webp" alt="Gallery" class="img-fluid rounded"/>
+                                </div>
+                                <div class="col-3">
+                                    <img src="./assets/blog_page/gallery3small.webp" alt="Gallery" class="img-fluid rounded"/>
+                                </div>
+                                <div class="col-3">
+                                    <img src="./assets/blog_page/gallery4small.webp" alt="Gallery" class="img-fluid rounded"/>
+                                </div>
+                                <div class="col-3">
+                                    <img src="./assets/blog_page/gallery5small.webp" alt="Gallery" class="img-fluid rounded"/>
+                                </div>
+                                <div class="col-3">
+                                    <img src="./assets/blog_page/gallery6small.webp" alt="Gallery" class="img-fluid rounded"/>
+                                </div>
+                                <div class="col-3">
+                                    <img src="./assets/blog_page/gallery7small.webp" alt="Gallery" class="img-fluid rounded"/>
+                                </div>
+                                <div class="col-3">
+                                    <img src="./assets/blog_page/gallery8small.webp" alt="Gallery" class="img-fluid rounded"/>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="mb-4 border-top">
+                            <h6 class="fw-medium py-3">Recently Added</h6>
+                            <div class="d-flex align-items-start mb-3">
+                                <img src="./assets/blog_page/recentlyAdded1.webp" alt="Recent Product" class="rounded me-2" />
+                                <div>
+                                    <p class="mb-0 small fw-medium">Curabitur porttitor orci eget nequ accumsan.</p>
+                                    <img src="./assets/blog_page/calendar.webp" alt="Calender Icon"><span class="text-muted small fw-normal ms-2">Apr 25, 2021</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start mb-3">
+                                <img src="./assets/blog_page/recentlyAdded2.webp" alt="Recent Product" class="rounded me-2" />
+                                <div>
+                                    <p class="mb-0 small fw-medium">Donec mattis arcu faucibus suscipit viverra.</p>
+                                    <img src="./assets/blog_page/calendar.webp" alt="Calender Icon"><span class="text-muted small fw-normal ms-2">Apr 25, 2021</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start mb-3">
+                                <img src="./assets/blog_page/recentlyAdded3.webp" alt="Recent Product" class="rounded me-2" />
+                                <div>
+                                    <p class="mb-0 small fw-medium">Quisque posuere tempus rutrum. Integer velit ex.</p>
+                                    <img src="./assets/blog_page/calendar.webp" alt="Calender Icon"><span class="text-muted small fw-normal ms-2">Apr 25, 2021</span>
+                                </div>
+                            </div>                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="subcribe py-4">
+            <div class="container font-poppins">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-5 col-md-6 mb-3 mb-md-0">
+                        <div class="subcribe_newsletter">
+                            <h3 class="fw-semibold">Subcribe our Newsletter</h3>
+                            <p class="fw-normal text-muted small">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna.</p>
+                        </div>
+                    </div>
+                                    
+                    <div class="col-lg-4 col-md-6 mb-3 mb-md-0">
+                        <form class="subcribe_form d-flex bg-white overflow-hidden">
+                            <input type="email" class="form-control me-2 border-0 flex-grow-1" placeholder="Your email address">
+                            <button type="submit" class="btn bg_mainColor text-white border-0 rounded-pill fw-semibold">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-3 col-12 text-lg-end text-center">
+                        <div class="social">
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f d-inline-flex align-items-center justify-content-center"></i></a>
+                            <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter d-inline-flex align-items-center justify-content-center"></i></a>
+                            <a href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest-p d-inline-flex align-items-center justify-content-center"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram d-inline-flex align-items-center justify-content-center"></i></a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer text-white py-4">
+        <div class="container">
+            <div class="row g-4 justify-content-between">
+                <div class="col-md-4 col-12 d-flex flex-column gap-3 mb-3">
+                    <div class="footer_logo">
+                        <a class="navbar-brand fw-bold" href="./index.html">
+                            <img src="./assets/general/logo_white.webp" alt="Ecobazar Logo" class="me-2">
+                        </a>
+                    </div>
+                    <p class="small text-secondary">Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magna congue nec.</p>
+                    <div class="main_info d-flex gap-3">
+                        <p class="small text-white text-nowrap">(219) 555-0114</p>
+                        <span class="text-secondary">or</span>
+                        <p class="small text-white">Proxy@gmail.com</p>
+                    </div>                    
+                </div>
+                
+                <div class="col-md-8">
+                    <div class="row row-cols-2 row-cols-md-3 g-2">                    
+                        <div class="col-md-3 col-6 right-side">
+                            <h6 class="fw-medium text-white mb-3">My Account</h6>
+                            <ul class="footer_list list-unstyled small fw-normal d-flex flex-column gap-2">
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">My Account</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Order History</a></li>
+                                <li><a href="./shopping_cart.html" target="_blank" class="text-secondary text-decoration-none">Shopping Cart</a></li>
+                                <li><a href="./wishlist.html" target="_blank" class="text-secondary text-decoration-none">Wishlist</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-6 right-side">
+                            <h6 class="fw-medium text-white mb-3">Helps</h6>
+                            <ul class="footer_list list-unstyled small fw-normal d-flex flex-column gap-2">
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Contact</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Faqs</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Terms & Condition</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-6 right-side">
+                            <h6 class="fw-medium text-white mb-3">Proxy</h6>
+                            <ul class="footer_list list-unstyled small fw-normal d-flex flex-column gap-2">
+                                <li><a href="./aboutUs.html" target="_blank" class="text-secondary text-decoration-none">About</a></li>
+                                <li><a href="./shop.html" target="_blank" class="text-secondary text-decoration-none">Shop</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Product</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Track Order</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-6 right-side">
+                            <h6 class="fw-medium text-white mb-3">Categories</h6>
+                            <ul class="footer_list list-unstyled small fw-normal d-flex flex-column gap-2">
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Fruit & Vegetables</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Meat & Fish</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Bread & Bakery</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Beauty & Health</a></li>
+                            </ul>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+
+            
+            <div class="mt-4 border-top d-flex flex-column flex-md-row justify-content-md-between align-items-center text-center text-md-start">
+                <small class="text-secondary">Ecobazar eCommerce © 2021. All Rights Reserved.</small>                                                  
+                <div class="d-flex flex-row flex-wrap justify-content-center justify-content-md-start gap-1">
+                    <a href="https://account.apple.com/sign-in" target="_blank" class="d-flex  flex-row gap-2"><img src="./assets/paymentMethod/ApplePay.webp" alt="Apple Pay" width="32px"></a>
+                    <a href="https://secure.checkout.visa.com/createAccount?channel=destination&niflow=destination&nicmp=destination&locale=en-US&country=US.html" target="_blank" class="d-flex flex-row gap-2"><img src="./assets/paymentMethod/Visa.webp" alt="Visa" width="32px"></a>
+                    <a href="https://bank.discover.com/web/deposits/originations/personal-info/name" target="_blank" class="d-flex flex-row gap-2"><img src="./assets/paymentMethod/Discover.webp" alt="Discover" width="32px"></a>
+                    <a href="https://src.mastercard.com/profile/enroll?cmp=us.en-us.nam.mccom.EnrollInClicktoPay&locale=en_US" target="_blank" class="d-flex  flex-row gap-2"><img src="./assets/paymentMethod/Mastercard.webp" alt="Mastercard" width="32px"></a>
+                    <a href="https://www.secure-payment-services.com/account/login/" target="_blank" class="d-flex  flex-row gap-2"><img src="./assets/paymentMethod/secure-payment.webp" alt="Secure Payment" width="32px"></a>
+                </div>                                
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+</body>
+</html>

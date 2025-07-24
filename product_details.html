@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Ecobazar</title>
+    <!-- Bootstrab 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <header class="header">    
+        <!---------------Top Bar--------------------->
+        <div class="py-2 border-bottom bg-white">
+            <div class="container">
+                <div class="row align-items-center justify-content-between font-poppins top-bar">
+                    <div class="col-md-6">
+                        <div class=" d-flex align-items-center">                    
+                            <img src="./assets/general/MapPin.webp" alt="Location Icon" width="15" height="18" class="me-2">
+                            <span class="location">
+                                Store Location: Lincoln-344, Illinois, Chicago, USA
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="d-flex justify-content-md-end justify-content-center align-items-center gap-3">
+                            <li class="nav-item dropdown list-unstyled">
+                                <a class="nav-link dropdown-toggle me-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    ENG
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">ENG</a></li>
+                                    <li><a class="dropdown-item" href="#">AR</a></li>                                
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown list-unstyled">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    USD
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">USD</a></li>
+                                    <li><a class="dropdown-item" href="#">NIS</a></li>                               
+                                </ul>
+                            </li>
+                            <div class="sign border-start ps-3">
+                                <a href="#" class="ms-2 me-1 text-decoration-none bar-color">Sign In</a> /
+                                <a href="#" class="ms-1 text-decoration-none bar-color">Sign Up</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>                    
+    </header>
+    <!-------------------------------------------------------->
+    <nav class="navbar navbar-expand-lg bg-white py-3 border-bottom position-sticky top-0" style="z-index: 5;">
+        <div class="container font-poppins">                
+            <div class="logo">
+                <a class="navbar-brand fw-bold" href="./index.html">
+                    <img src="./assets/general/Logo.webp" alt="Ecobazar Logo" class="me-2">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-content d-flex flex-wrap justify-content-between align-items-center w-100 gap-3"> 
+                    <div class="search-parent flex-grow-1 mx-3">
+                        <form class="d-flex justify-content-center flex-wrap" role="search">
+                            <div class="search-form d-flex position-relative">
+                                <img src="./assets/general/Search.webp" alt="Search" class="search-icon">
+                                <input class="search-input form-control form-control-sm border-0" type="search" placeholder="Search" aria-label="Search" />
+                                <button class="btn border-0" type="submit">Search</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="user-interaction-icons d-flex align-items-center gap-3">
+                        <a href="./wishlist.html" target="_blank" class="wish-icon border-end pe-3">
+                            <img src="./assets/general/Heart.webp" alt="Wishlist">
+                        </a> 
+                        
+                        <a  class="cart-icon d-flex align-items-center notification position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                            <img src="./assets/general/cart.webp" alt="Shopping Cart">
+                        </a>
+
+                        <div class="shopping-info d-flex flex-column">
+                            <span class="shopping-cart">Shopping cart:</span>
+                            <span class="price fw-medium">$57.00</span>
+                        </div>
+                    </div>
+                </div>  
+            </div>    
+        </div>            
+    </nav>
+    
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Shopping Card (2)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column h-100">
+            <div class="card mb-1" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="off_img_body col-md-3 col-sm-3">
+                        <img src="./assets/popular_products/FreshIndianMalta.webp" class="offcanvas_img img-fluid rounded-start" alt="Fresh Indian Malta">
+                    </div>
+                    <div class="col-md-9 col-sm-9">
+                        <div class="card-body font-poppins d-flex justify-content-between">
+                            <div class="cart_content_offcanvas">
+                                <h5 class="card-title fw-normal">Fresh Indian Orange</h5>
+                                <p class="card-text"><span class="text-secondary">1 kg x </span>12.00</p>
+                            </div>                        
+                            <div class="close_btn">
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" disabled aria-label="Close"></button>  
+                            </div>                                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="off_img_body col-md-3 col-sm-3">
+                        <img src="./assets/popular_products/greenApple.webp" class="offcanvas_img img-fluid rounded-start" alt="Green Apple">
+                    </div>
+                    <div class="col-md-9 col-sm-9">
+                        <div class="card-body font-poppins d-flex justify-content-between">
+                            <div class="cart_content_offcanvas">
+                                <h5 class="card-title fw-normal">Fresh Indian Orange</h5>
+                                <p class="card-text"><span class="text-secondary">1 kg x </span>14.00</p>
+                            </div>                        
+                            <div class="close_btn">
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" disabled aria-label="Close"></button>  
+                            </div>                                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-top pt-3 mt-auto">
+                <div class="card p-3 border-0 w-100">
+                    <div class="d-flex justify-content-between mb-3">
+                        <span class="fw-normal">2 Products</span>
+                        <span class="fw-semibold text-dark">$26.00</span>
+                    </div>
+                    <div class="offCanvas_btns d-flex flex-column gap-2">
+                        <a href="#" target="_blank" class="btn checkout_btn bg_mainColor text-white rounded-pill fw-semibold">Checkout</a>
+                        <a href="#" target="_blank" class="btn go_cart_btn text_mainColor rounded-pill fw-semibold">Go To Cart</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <nav class="list-navbar navbar navbar-expand-lg bg-dark navbar-dark position-sticky" data-bs-theme="dark" style="top: 62px; z-index: 4;">
+        <div class="container font-poppins">                                
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+                    <li class="nav-item d-flex">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDownWhite.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" href="./shop.html">Shop</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" href="#">Pages</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" href="./blog.html">Blog</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" href="./aboutUs.html">About Us</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" href="#">Contact Us</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                </ul>
+                <span class="navbar-text text-white">
+                    <img src="./assets/general/PhoneCall.webp" alt="Phone Call Icon">
+                    (219) 555-0114
+                </span>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
+        <section class="product_details">
+            <div class="product_details_header py-5">   
+                <div class="container d-flex flex-row align-items-center gap-2">
+                    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb"
+                        aria-label="breadcrumb">
+                        <ol class="breadcrumb d-flex flex-row align-items-center gap-2 mb-0">
+                            <li class="breadcrumb-item d-flex align-items-center">
+                                <a href="./index.html">
+                                <img src="./assets/wishlist_page/home_icon.webp" alt="Home Icon" style="width: 20px; height: 20px;" />
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item active d-flex align-items-center" aria-current="page">
+                                <span class="fw-normal font-poppins text-secondary mt-1" style="font-size: 1rem;">Category</span>
+                            </li>
+                            <li class="breadcrumb-item active d-flex align-items-center" aria-current="page">
+                                <span class="fw-normal font-poppins text-secondary mt-1" style="font-size: 1rem;">Vegetables</span>
+                            </li>
+                            <li class="breadcrumb-item active d-flex align-items-center" aria-current="page">
+                                <span class="fw-normal font-poppins text_mainColor mt-1" style="font-size: 1rem;">Chinese Cabbage</span>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="container py-4">
+                <div class="row g-4">                        
+                    <div class="col-md-6 d-flex gap-3">                             
+                        <div class="d-flex flex-column align-items-center h-100 gap-2">
+                            <button class="btn p-1"><i class="fa-solid fa-chevron-up"></i></button>
+                            <img src="./assets/modal/modal_chineseCabbage1.webp" class="img-thumbnail border border-success" style="width: 80px; height: 90px; object-fit: cover;" alt="Thumb 1">
+                            <img src="./assets/modal/modal_chineseCabbage2.webp" class="img-thumbnail" style="width: 80px; height: 90px; object-fit: cover;" alt="Thumb 2">
+                            <img src="./assets/modal/modal_chineseCabbage3.webp" class="img-thumbnail" style="width: 80px; height: 90px; object-fit: cover;" alt="Thumb 3">
+                            <img src="./assets/modal/modal_chineseCabbage4.webp" class="img-thumbnail" style="width: 80px; height: 90px; object-fit: cover;" alt="Thumb 3">                                    
+                            <button class="btn p-1"><i class="fa-solid fa-chevron-down"></i></button>
+                        </div>
+
+                        <div class="flex-grow-1">
+                            <img src="./assets/modal/modal_chineseCabbage.webp" class="img-fluid rounded w-100 h-100" alt="Chinese Cabbage">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 font-poppins">
+                        <div class="modal_main_title_price border-bottom">
+                            <div class="madal_title d-flex flex-row align-items-center gap-2">
+                                <h2 class="fw-semibold">Chinese Cabbage</h2>
+                                <small class="modal_stock text_mainColor p-1 fw-normal">In Stock</small>
+                            </div>
+                            
+                            <div class="modal_reviews d-flex flex-row gap-3 align-items-center">
+                                <div class="text-warning small d-flex justify-content-start gap-1">
+                                    &#9733;&#9733;&#9733;&#9733;&#9733;<span class="text-secondary fw-normal small">4 Review</span>
+                                </div>
+                                <span class="text-secondary fs-5">•</span>
+                                <p class="fw-medium mb-1">SKU: <span class="fw-normal text-secondary">2,51,594</span></p>
+                            </div>
+
+                            <div class="modal_prices mb-3 d-flex flex-row align-items-center">                                
+                                <span class="modal_old_price text-decoration-line-through me-2 fs-5">$48.00</span>
+                                <span class="modal_new_price fw-semibold fs-4">$17.28</span>
+                                <small class="badge fw-medium p-2 ms-3">64% Off</small>
+                            </div>
+                        </div>
+
+                        <div class="modal_main_info border-bottom my-3">
+                            <div class="modal_brand_share d-flex justify-content-between my-2">
+                                <div class="modal_brand">
+                                    <small class="fw-normal mb-1">Brand: <img src="./assets/modal/brand_farmary.webp" class="img-fluid" alt="Farmary Brand"></small>
+                                </div>
+                                <div class="modal_social">
+                                    <small class="fw-normal mb-1">Share item:</small>
+                                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f d-inline-flex align-items-center justify-content-center"></i></a>
+                                    <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter d-inline-flex align-items-center justify-content-center"></i></a>
+                                    <a href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest-p d-inline-flex align-items-center justify-content-center"></i></a>
+                                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram d-inline-flex align-items-center justify-content-center"></i></a>
+                                </div>    
+                            </div>
+                            <div class="modal_info my-1">
+                                <p class="small text-secondary fw-normal">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar. </p>
+                            </div>
+                        </div>
+                        
+                        <div class="modal_add_card d-flex flex-row justify-content-start align-items-center gap-1">
+                            <div class="input-group rounded-pill mt-1 py-0 border shadow-sm overflow-hidden d-flex align-items-center justify-content-center" style="width: 120px; height: 50px;">
+                                <button class="btn border-0 d-flex align-items-center justify-content-center rounded-circle" type="button" style="width: 20px; height: 20px;">–</button>
+                                <input type="number" class="form-control border-0 text-center fw-bold px-0" value="1" min="1" style="width: 30px; font-size: 1rem;" />
+                                <button class="btn border-0 d-flex align-items-center justify-content-center rounded-circle" type="button" style="width: 20px; height: 20px;">+</button>
+                            </div>
+                            <div class="modal_btn w-100">
+                                <button class="btn px-4 py-2 shadow-sm fw-semibold rounded-pill w-100 d-flex align-items-center justify-content-center gap-2">Add to Cart<a href="#"><img src="./assets/general/cart_white.webp" class="popular_product_cart ms-2" alt="Cart Icon"></a></button>                                        
+                            </div>
+                            <div class="modal_whishList">
+                                <button class="p-0 border-0 bg-transparent"><i class="fa-regular fa-heart p-2"></i></button>
+                            </div>
+                        </div>                               
+
+                        <div class="modal_tags d-flex flex-column border-top my-3">                                    
+                            <small class="fw-medium mt-3">Category: <small class="fw-normal text-secondary">Vegetables</small></small>
+                            <small class="d-flex flex-row gap-1 fw-medium mt-2">Tags: <small class="fw-normal text-secondary d-flex flex-row gap-1 align-items-center"><span>Vegetables</span><span>Healthy</span><span>Chinese</span><span>Cabbage</span><span>Green Cabbage</span></small></small>                            
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product_information font-poppins">
+            <ul class="nav nav-underline d-flex justify-content-center mb-3 border-bottom" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                <button class="nav-link fw-medium active" id="desc-tab" data-bs-toggle="tab" data-bs-target="#desc" type="button" role="tab" aria-controls="desc" aria-selected="true">Descriptions</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                <button class="nav-link fw-medium" id="info-tab" data-bs-toggle="tab" data-bs-target="#info" type="button" role="tab" aria-controls="info" aria-selected="false">Additional Information</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                <button class="nav-link fw-medium" id="feedback-tab" data-bs-toggle="tab" data-bs-target="#feedback" type="button" role="tab" aria-controls="feedback" aria-selected="false">Customer Feedback</button>
+                </li>
+            </ul>
+            <div class="container py-3">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="desc" role="tabpanel" aria-labelledby="desc-tab">
+                        <div class="row g-4">
+                            <div class="col-12 col-md-7">
+                                <p class="text-secondary fw-normal small">
+                                    Sed commodo aliquam dui ac porta. Fusce ipsum felis, imperdiet at posuere ac, viverra at mauris. 
+                                    Maecenas tincidunt ligula a sem vestibulum pharetra. Maecenas auctor tortor lacus, nec laoreet nisi porttitor vel. 
+                                    Etiam tincidunt metus vel dui interdum sollicitudin. Mauris sem ante, vestibulum nec orci vitae, aliquam mollis lacus. 
+                                    Sed et condimentum arcu, id molestie tellus. Nulla facilisi. Nam scelerisque vitae justo a convallis. 
+                                    Morbi urna ipsum, placerat quis commodo quis, egestas elementum leo. Donec convallis mollis enim. Aliquam id mi quam. Phasellus nec fringilla elit.
+                                </p>
+                                <p class="text-secondary fw-normal small">
+                                    Nulla mauris tellus, feugiat quis pharetra sed, gravida ac dui. 
+                                    Sed iaculis, metus faucibus elementum tincidunt, turpis mi viverra velit, 
+                                    pellentesque tristique neque mi eget nulla. Proin luctus elementum neque et pharetra. 
+                                </p>
+                                <ul class="list-unstyled check-list">
+                                    <li class="small text-secondary fw-normal mb-2"><i class="fa fa-check-circle text_mainColor me-2"></i>100 g of fresh leaves provides.</li>
+                                    <li class="small text-secondary fw-normal mb-2"><i class="fa fa-check-circle text_mainColor me-2"></i>Aliquam ac est at augue volutpat elementum.</li>
+                                    <li class="small text-secondary fw-normal mb-2"><i class="fa fa-check-circle text_mainColor me-2"></i>Quisque nec enim eget sapien molestie.</li>
+                                    <li class="small text-secondary fw-normal mb-2"><i class="fa fa-check-circle text_mainColor me-2"></i>Proin convallis odio volutpat finibus posuere.</li>
+                                </ul>
+                                <p class="text-secondary fw-normal small">
+                                    Cras et diam maximus, accumsan sapien et, sollicitudin velit. 
+                                    Nulla blandit eros non turpis lobortis iaculis at ut massa. 
+                                </p>
+                            </div>
+
+                            <div class="col-12 col-md-4 offset-1 mx-auto">
+                                <div class="position-relative mb-3">
+                                    <img src="./assets/product_details_page/product_description_video.webp" alt="Video" class="img-fluid rounded">
+                                    <button class="btn btn-light bg_mainColor rounded-circle shadow position-absolute top-50 start-50 translate-middle">
+                                        <i class="fa-solid fa-play text-white"></i>
+                                    </button>
+                                </div>
+
+                                <div class="border rounded p-3 d-flex flex-column flex-lg-row justify-content-between gap-3">
+                                    <div class="d-flex align-items-center gap-2 flex-fill">
+                                        <img src="./assets/product_details_page/price-tag.webp" alt="Price Tag">
+                                        <div>
+                                            <span class="mb-0 fw-medium small">64% Discount</span><br>
+                                            <small class="text-secondary fw-normal" style="font-size: 10px;">Save your 64% money with us</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-2 flex-fill">
+                                        <img src="./assets/product_details_page/leaf.webp" alt="Organic">
+                                        <div>
+                                            <span class="mb-0 fw-medium small">100% Organic</span><br>
+                                            <small class="text-secondary fw-normal" style="font-size: 10px;">100% Organic Vegetables</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="desc-tab">
+                        <div class="row g-4">
+                            <div class="col-12 col-md-7">
+                                <div class="product-details p-3">
+                                    <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                                        <li class="fw-normal text-secondary small"><small class="text-black pe-5">Weight:</small> 03</li>
+                                        <li class="fw-normal text-secondary small"><small class="text-black pe-5">Color:</small> Green</li>
+                                        <li class="fw-normal text-secondary small"><small class="text-black pe-5">Type:</small> Organic</li>
+                                        <li class="fw-normal text-secondary small"><small class="text-black pe-3">Category:</small> Vegetables</li>
+                                        <li class="fw-normal text-secondary small"><small class="text-black pe-0">Stock Status:</small> Available (5,413)</li>
+                                        <li class="fw-normal text-secondary small"><small class="text-black pe-5">Tags:</small>
+                                        <span class="product_details_tag me-1">Vegetables,</span>
+                                        <span class="product_details_tag me-1">Healthy,</span>
+                                        <span class="product_details_tag me-1">Chinese,</span>
+                                        <span class="product_details_tag me-1">Cabbage,</span>
+                                        <span class="product_details_tag me-1">Green Cabbage,</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-4 offset-1 mx-auto">
+                                <div class="position-relative mb-3">
+                                    <img src="./assets/product_details_page/product_description_video.webp" alt="Video" class="img-fluid rounded">
+                                    <button class="btn btn-light bg_mainColor rounded-circle shadow position-absolute top-50 start-50 translate-middle">
+                                        <i class="fa-solid fa-play text-white"></i>
+                                    </button>
+                                </div>
+
+                                <div class="border rounded p-3 d-flex flex-column flex-lg-row justify-content-between gap-3">
+                                    <div class="d-flex align-items-center gap-2 flex-fill">
+                                        <img src="./assets/product_details_page/price-tag.webp" alt="Price Tag">
+                                        <div>
+                                            <span class="mb-0 fw-medium small">64% Discount</span><br>
+                                            <small class="text-secondary fw-normal" style="font-size: 10px;">Save your 64% money with us</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-2 flex-fill">
+                                        <img src="./assets/product_details_page/leaf.webp" alt="Organic">
+                                        <div>
+                                            <span class="mb-0 fw-medium small">100% Organic</span><br>
+                                            <small class="text-secondary fw-normal" style="font-size: 10px;">100% Organic Vegetables</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="feedback" role="tabpanel" aria-labelledby="desc-tab">
+                        <div class="container py-5">
+                            <div class="row g-4 flex-column">
+                                <div class="col-8 border-bottom pb-3">
+                                    <div class="d-flex gap-3">                                        
+                                        <div class="w-100">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div class="d-flex flex-row gap-3">
+                                                    <img src="./assets/product_details_page/KristinWatson.webp" class="rounded-circle" style="width: 3.125rem; height: 3.125rem;" alt="User Photo">
+                                                    <div>
+                                                        <small class="fw-medium mb-1">Kristin Watson</small>
+                                                        <div class="text-warning fs-5 mb-1">
+                                                            &#9733;&#9733;&#9733;&#9733;&#9733;                                            
+                                                        </div> 
+                                                    </div>                                                
+                                                </div>
+                                                <span class="text-secondary ms-2">2 min ago</span>
+                                            </div>
+                                            <p class="text-secondary small fw-normal mt-2 mb-0">Duis at ullamcorper nulla, eu dictum eros.</p>
+                                        </div>
+                                    </div>
+                                </div>                                
+
+                                <div class="col-8 border-bottom pb-3">
+                                    <div class="d-flex gap-3">                                        
+                                        <div class="w-100">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div class="d-flex flex-row gap-3">
+                                                    <img src="./assets/product_details_page/JacobJones.webp" class="rounded-circle" style="width: 3.125rem; height: 3.125rem;" alt="User Photo">
+                                                    <div>
+                                                        <small class="fw-medium mb-1">Jacob Jones</small>
+                                                        <div class="text-warning fs-5 mb-1">
+                                                            &#9733;&#9733;&#9733;&#9733;&#9733;                                           
+                                                        </div> 
+                                                    </div>                                                
+                                                </div>
+                                                <span class="text-secondary ms-2">2 min ago</span>
+                                            </div>
+                                            <p class="text-secondary small fw-normal mt-2 mb-0">
+                                                Vivamus eget euismod magna. Nam sed lacinia nibh, et lacinia lacus.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-8 border-bottom pb-3">
+                                    <div class="d-flex gap-3">                                        
+                                        <div class="w-100">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div class="d-flex flex-row gap-3">
+                                                    <img src="./assets/product_details_page/RalphEdwards.webp" class="rounded-circle" style="width: 3.125rem; height: 3.125rem;" alt="User Photo">
+                                                    <div>
+                                                        <small class="fw-medium mb-1">Ralph Edwards</small>
+                                                        <div class="text-warning fs-5 mb-1">
+                                                            &#9733;&#9733;&#9733;&#9733;&#9733;                                          
+                                                        </div> 
+                                                    </div>                                                
+                                                </div>
+                                                <span class="text-secondary ms-2">2 min ago</span>
+                                            </div>
+                                            <p class="text-secondary small fw-normal mt-2 mb-0">
+                                                200+ Canton Pak Choi Bok Choy Chinese Cabbage Seeds Heirloom Non-GMO Productive Brassica rapa VAR.
+                                                 chinensis, a.k.a. Canton's Choice, Bok Choi, from USA
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                               <div class="col-8 pb-3">
+                                    <div class="d-flex gap-3">                                        
+                                        <div class="w-100">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div class="d-flex flex-row gap-3">
+                                                    <img src="./assets/product_details_page/JaneCooper.webp" class="rounded-circle" style="width: 3.125rem; height: 3.125rem;" alt="User Photo">
+                                                    <div>
+                                                        <small class="fw-medium mb-1">Jane Cooper</small>
+                                                        <div class="text-warning fs-5 mb-1">
+                                                            &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>                                           
+                                                        </div> 
+                                                    </div>                                                
+                                                </div>
+                                                <span class="text-secondary ms-2">30 Apr, 2021</span>
+                                            </div>
+                                            <p class="text-secondary small fw-normal mt-2 mb-0">
+                                                Keep the soil evenly moist for the healthiest growth. If the sun gets too hot, Chinese cabbage tends to "bolt" or go to seed; in long periods of heat, s
+                                                ome kind of shade may be helpful. Watch out for snails, as they will harm the plants.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-8 text-center pt-2 d-flex justify-content-start">
+                                <button class="prod_details_btn border-0 p-3 rounded-pill small fw-semibold text_mainColor px-4">Load More</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>    
+        </section>
+
+        <section class="related_products py-4">
+            <div class="container my-3 font-poppins">
+                <div class="popular_products_title d-flex justify-content-center mb-3">
+                    <h2 class="fw-semibold">Related Products</h2>                    
+                </div>
+
+                <div class="row g-0 justify-content-center">                                        
+                    <div class="popular_product_card col-6 col-md-3 col-lg-3">                           
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">
+                                <div class="pop_product-sale position-absolute bg-danger z-1 text-white small fw-normal rounded-1">
+                                    <span>Sale 50%</span>
+                                </div>
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/greenApple.webp" class="img-fluid product_pop_img card-img-top p-3" alt="Green Apple">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Green Apple</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$14.99</span>
+                                        <span class="price_line_through text-decoration-line-through fw-normal text-nowrap">$20.99</span>
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+ 
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                                                
+                    </div>
+                    
+                    <div class="popular_product_card col-6 col-md-3 col-lg-3">                           
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">                                    
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/FreshCauliflower.webp" class="img-fluid product_pop_img card-img-top p-3" alt="Fresh Cauliflower">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Fresh Cauliflower</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$14.99</span>                                            
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                          
+                    </div>
+                    
+                    <div class="popular_product_card col-6 col-md-3 col-lg-3">
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">                                    
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/GreenCapsicum.webp" class="product_pop_img card-img-top p-3" alt="Green Capsicum">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Green Capsicum</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$14.99</span>                                                
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+              
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                         
+                    </div>
+
+                    <div class="popular_product_card col-6 col-md-3 col-lg-3">                          
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">                                    
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/Ladies_Finger.webp" class="img-fluid product_pop_img card-img-top p-3 h-100" alt="Ladies Finger">                                    
+                            </div>
+                            
+                            <div class="card_content ladiesCard card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Ladies Finger</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$14.99</span>
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+                       
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                                                                       
+                    </div>                                                                                                                                      
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="subcribe py-4">
+            <div class="container font-poppins">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-5 col-md-6 mb-3 mb-md-0">
+                        <div class="subcribe_newsletter">
+                            <h3 class="fw-semibold">Subcribe our Newsletter</h3>
+                            <p class="fw-normal text-muted small">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna.</p>
+                        </div>
+                    </div>
+                                    
+                    <div class="col-lg-4 col-md-6 mb-3 mb-md-0">
+                        <form class="subcribe_form d-flex bg-white overflow-hidden">
+                            <input type="email" class="form-control me-2 border-0 flex-grow-1" placeholder="Your email address">
+                            <button type="submit" class="btn bg_mainColor text-white border-0 rounded-pill fw-semibold">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-3 col-12 text-lg-end text-center">
+                        <div class="social">
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f d-inline-flex align-items-center justify-content-center"></i></a>
+                            <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter d-inline-flex align-items-center justify-content-center"></i></a>
+                            <a href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest-p d-inline-flex align-items-center justify-content-center"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram d-inline-flex align-items-center justify-content-center"></i></a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </section>
+
+        <!-------------------------Modal code---------------------------------------->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-fullscreen-lg-down">
+                <div class="modal-content border-0 rounded">
+                    <div class="modal-body p-4">
+                        <div class="row g-4">                        
+                            <div class="col-md-6 d-flex gap-3">                             
+                                <div class="d-flex flex-column align-items-center h-100 gap-2">
+                                    <button class="btn p-1"><i class="fa-solid fa-chevron-up"></i></button>
+                                    <img src="./assets/modal/modal_chineseCabbage1.webp" class="img-thumbnail border border-success" style="width: 80px; height: 90px; object-fit: cover;" alt="Thumb 1">
+                                    <img src="./assets/modal/modal_chineseCabbage2.webp" class="img-thumbnail" style="width: 80px; height: 90px; object-fit: cover;" alt="Thumb 2">
+                                    <img src="./assets/modal/modal_chineseCabbage3.webp" class="img-thumbnail" style="width: 80px; height: 90px; object-fit: cover;" alt="Thumb 3">
+                                    <img src="./assets/modal/modal_chineseCabbage4.webp" class="img-thumbnail" style="width: 80px; height: 90px; object-fit: cover;" alt="Thumb 3">                                    
+                                    <button class="btn p-1"><i class="fa-solid fa-chevron-down"></i></button>
+                                </div>
+
+                                <div class="flex-grow-1">
+                                    <img src="./assets/modal/modal_chineseCabbage.webp" class="img-fluid rounded w-100 h-100" alt="Chinese Cabbage">
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6 font-poppins">
+                                <div class="modal_main_title_price border-bottom">
+                                    <div class="madal_title d-flex flex-row align-items-center gap-2">
+                                        <h2 class="fw-semibold">Chinese Cabbage</h2>
+                                        <small class="modal_stock text_mainColor p-1 fw-normal">In Stock</small>
+                                    </div>
+                                    
+                                    <div class="modal_reviews d-flex flex-row gap-3 align-items-center">
+                                        <div class="text-warning small d-flex justify-content-start gap-1">
+                                            &#9733;&#9733;&#9733;&#9733;&#9733;<span class="text-secondary fw-normal small">4 Review</span>
+                                        </div>
+                                        <span class="text-secondary fs-5">•</span>
+                                        <p class="fw-medium mb-1">SKU: <span class="fw-normal text-secondary">2,51,594</span></p>
+                                    </div>
+
+                                    <div class="modal_prices mb-3 d-flex flex-row align-items-center">                                
+                                        <span class="modal_old_price text-decoration-line-through me-2 fs-5">$48.00</span>
+                                        <span class="modal_new_price fw-semibold fs-4">$17.28</span>
+                                        <small class="badge fw-medium p-2 ms-3">64% Off</small>
+                                    </div>
+                                </div>
+
+                                <div class="modal_main_info border-bottom my-3">
+                                    <div class="modal_brand_share d-flex justify-content-between my-2">
+                                        <div class="modal_brand">
+                                            <small class="fw-normal mb-1">Brand: <img src="./assets/modal/brand_farmary.webp" class="img-fluid" alt="Farmary Brand"></small>
+                                        </div>
+                                        <div class="modal_social">
+                                            <small class="fw-normal mb-1">Share item:</small>
+                                            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f d-inline-flex align-items-center justify-content-center"></i></a>
+                                            <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter d-inline-flex align-items-center justify-content-center"></i></a>
+                                            <a href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest-p d-inline-flex align-items-center justify-content-center"></i></a>
+                                            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram d-inline-flex align-items-center justify-content-center"></i></a>
+                                        </div>    
+                                    </div>
+                                    <div class="modal_info my-1">
+                                        <p class="small text-secondary fw-normal">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar. </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="modal_add_card d-flex flex-row justify-content-start align-items-center gap-1">
+                                    <div class="input-group rounded-pill mt-1 py-0 border shadow-sm overflow-hidden d-flex align-items-center justify-content-center" style="width: 120px; height: 50px;">
+                                        <button class="btn border-0 d-flex align-items-center justify-content-center rounded-circle" type="button" style="width: 20px; height: 20px;">–</button>
+                                            <input type="number" class="form-control border-0 text-center fw-bold px-0" value="1" min="1" style="width: 30px; font-size: 1rem;" />
+                                        <button class="btn border-0 d-flex align-items-center justify-content-center rounded-circle" type="button" style="width: 20px; height: 20px;">+</button>
+                                    </div>
+                                    <div class="modal_btn w-100">
+                                        <button class="btn px-4 py-2 shadow-sm fw-semibold rounded-pill w-100 d-flex align-items-center justify-content-center gap-2">Add to Cart<a href="#"><img src="./assets/general/cart_white.webp" class="popular_product_cart ms-2" alt="Cart Icon"></a></button>                                        
+                                    </div>
+                                    <div class="modal_whishList">
+                                        <button class="p-0 border-0 bg-transparent"><i class="fa-regular fa-heart p-2"></i></button>
+                                    </div>
+                                </div>                               
+
+                                <div class="modal_tags d-flex flex-column border-top my-3">                                    
+                                    <small class="fw-medium mt-3">Category: <small class="fw-normal text-secondary">Vegetables</small></small>
+                                    <small class="d-flex flex-row gap-1 fw-medium mt-2">Tags: <small class="fw-normal text-secondary d-flex flex-row gap-1 align-items-center"><span>Vegetables</span><span>Healthy</span><span>Chinese</span><span>Cabbage</span><span>Green Cabbage</span></small></small>                            
+                                </div>
+                           
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer border-top">
+                        <button type="button" class="btn modal_footer_btn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer text-white py-4">
+        <div class="container">
+            <div class="row g-4 justify-content-between">
+                <div class="col-md-4 col-12 d-flex flex-column gap-3 mb-3">
+                    <div class="footer_logo">
+                        <a class="navbar-brand fw-bold" href="./index.html">
+                            <img src="./assets/general/logo_white.webp" alt="Ecobazar Logo" class="me-2">
+                        </a>
+                    </div>
+                    <p class="small text-secondary">Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magna congue nec.</p>
+                    <div class="main_info d-flex gap-3">
+                        <p class="small text-white text-nowrap">(219) 555-0114</p>
+                        <span class="text-secondary">or</span>
+                        <p class="small text-white">Proxy@gmail.com</p>
+                    </div>                    
+                </div>
+                
+                <div class="col-md-8">
+                    <div class="row row-cols-2 row-cols-md-3 g-2">                    
+                        <div class="col-md-3 col-6 right-side">
+                            <h6 class="fw-medium text-white mb-3">My Account</h6>
+                            <ul class="footer_list list-unstyled small fw-normal d-flex flex-column gap-2">
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">My Account</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Order History</a></li>
+                                <li><a href="./shopping_cart.html" target="_blank" class="text-secondary text-decoration-none">Shopping Cart</a></li>
+                                <li><a href="./wishlist.html" target="_blank" class="text-secondary text-decoration-none">Wishlist</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-6 right-side">
+                            <h6 class="fw-medium text-white mb-3">Helps</h6>
+                            <ul class="footer_list list-unstyled small fw-normal d-flex flex-column gap-2">
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Contact</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Faqs</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Terms & Condition</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-6 right-side">
+                            <h6 class="fw-medium text-white mb-3">Proxy</h6>
+                            <ul class="footer_list list-unstyled small fw-normal d-flex flex-column gap-2">
+                                <li><a href="./aboutUs.html" target="_blank" class="text-secondary text-decoration-none">About</a></li>
+                                <li><a href="./shop.html" target="_blank" class="text-secondary text-decoration-none">Shop</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Product</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Track Order</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-6 right-side">
+                            <h6 class="fw-medium text-white mb-3">Categories</h6>
+                            <ul class="footer_list list-unstyled small fw-normal d-flex flex-column gap-2">
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Fruit & Vegetables</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Meat & Fish</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Bread & Bakery</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Beauty & Health</a></li>
+                            </ul>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+
+            
+            <div class="mt-4 border-top d-flex flex-column flex-md-row justify-content-md-between align-items-center text-center text-md-start">
+                <small class="text-secondary">Ecobazar eCommerce © 2021. All Rights Reserved.</small>                                                  
+                <div class="d-flex flex-row flex-wrap justify-content-center justify-content-md-start gap-1">
+                    <a href="https://account.apple.com/sign-in" target="_blank" class="d-flex  flex-row gap-2"><img src="./assets/paymentMethod/ApplePay.webp" alt="Apple Pay" width="32px"></a>
+                    <a href="https://secure.checkout.visa.com/createAccount?channel=destination&niflow=destination&nicmp=destination&locale=en-US&country=US.html" target="_blank" class="d-flex flex-row gap-2"><img src="./assets/paymentMethod/Visa.webp" alt="Visa" width="32px"></a>
+                    <a href="https://bank.discover.com/web/deposits/originations/personal-info/name" target="_blank" class="d-flex flex-row gap-2"><img src="./assets/paymentMethod/Discover.webp" alt="Discover" width="32px"></a>
+                    <a href="https://src.mastercard.com/profile/enroll?cmp=us.en-us.nam.mccom.EnrollInClicktoPay&locale=en_US" target="_blank" class="d-flex  flex-row gap-2"><img src="./assets/paymentMethod/Mastercard.webp" alt="Mastercard" width="32px"></a>
+                    <a href="https://www.secure-payment-services.com/account/login/" target="_blank" class="d-flex  flex-row gap-2"><img src="./assets/paymentMethod/secure-payment.webp" alt="Secure Payment" width="32px"></a>
+                </div>                                
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+</body>
+</html>

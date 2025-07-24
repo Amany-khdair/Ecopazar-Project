@@ -1,0 +1,1874 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Ecobazar</title>
+    <!-- Bootstrab 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./main.css">
+  </head>
+  <body>
+    
+    <header class="header">    
+        <!---------------Top Bar--------------------->
+        <div class="py-2 border-bottom bg-white">
+            <div class="container">
+                <div class="row align-items-center justify-content-between font-poppins top-bar">
+                    <div class="col-md-6">
+                        <div class=" d-flex align-items-center">                    
+                            <img src="./assets/general/MapPin.webp" alt="Location Icon" width="15" height="18" class="me-2">
+                            <span class="location">
+                                Store Location: Lincoln-344, Illinois, Chicago, USA
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="d-flex justify-content-md-end justify-content-center align-items-center gap-3">
+                            <li class="nav-item dropdown list-unstyled">
+                                <a class="nav-link dropdown-toggle me-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    ENG
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">ENG</a></li>
+                                    <li><a class="dropdown-item" href="#">AR</a></li>                                
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown list-unstyled">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    USD
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">USD</a></li>
+                                    <li><a class="dropdown-item" href="#">NIS</a></li>                               
+                                </ul>
+                            </li>
+                            <div class="sign border-start ps-3">
+                                <a href="#" class="ms-2 me-1 text-decoration-none bar-color">Sign In</a> /
+                                <a href="#" class="ms-1 text-decoration-none bar-color">Sign Up</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>                    
+    </header>
+    <!-------------------------------------------------------->
+    <nav class="navbar navbar-expand-lg bg-white py-3 border-bottom position-sticky top-0" style="z-index: 5;">
+        <div class="container font-poppins">                
+            <div class="logo">
+                <a class="navbar-brand fw-bold" href="./index.html">
+                    <img src="./assets/general/Logo.webp" alt="Ecobazar Logo" class="me-2">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-content d-flex flex-wrap justify-content-between align-items-center w-100 gap-3"> 
+                    <div class="search-parent flex-grow-1 mx-3">
+                        <form class="d-flex justify-content-center flex-wrap" role="search">
+                            <div class="search-form d-flex position-relative">
+                                <img src="./assets/general/Search.webp" alt="Search" class="search-icon">
+                                <input class="search-input form-control form-control-sm border-0" type="search" placeholder="Search" aria-label="Search" />
+                                <button class="btn border-0" type="submit">Search</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="user-interaction-icons d-flex align-items-center gap-3">
+                        <a href="./wishlist.html" target="_blank" class="wish-icon border-end pe-3">
+                            <img src="./assets/general/Heart.webp" alt="Wishlist">
+                        </a> 
+                        
+                        <a  class="cart-icon d-flex align-items-center notification position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                            <img src="./assets/general/cart.webp" alt="Shopping Cart">
+                        </a>
+
+                        <div class="shopping-info d-flex flex-column">
+                            <span class="shopping-cart">Shopping cart:</span>
+                            <span class="price fw-medium">$57.00</span>
+                        </div>
+                    </div>
+                </div>  
+            </div>    
+        </div>            
+    </nav>
+    
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Shopping Card (2)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column h-100">
+            <div class="card mb-1" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="off_img_body col-md-3 col-sm-3">
+                        <img src="./assets/popular_products/FreshIndianMalta.webp" class="offcanvas_img img-fluid rounded-start" alt="Fresh Indian Malta">
+                    </div>
+                    <div class="col-md-9 col-sm-9">
+                        <div class="card-body font-poppins d-flex justify-content-between">
+                            <div class="cart_content_offcanvas">
+                                <h5 class="card-title fw-normal">Fresh Indian Orange</h5>
+                                <p class="card-text"><span class="text-secondary">1 kg x </span>12.00</p>
+                            </div>                        
+                            <div class="close_btn">
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" disabled aria-label="Close"></button>  
+                            </div>                                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="off_img_body col-md-3 col-sm-3">
+                        <img src="./assets/popular_products/greenApple.webp" class="offcanvas_img img-fluid rounded-start" alt="Green Apple">
+                    </div>
+                    <div class="col-md-9 col-sm-9">
+                        <div class="card-body font-poppins d-flex justify-content-between">
+                            <div class="cart_content_offcanvas">
+                                <h5 class="card-title fw-normal">Fresh Indian Orange</h5>
+                                <p class="card-text"><span class="text-secondary">1 kg x </span>14.00</p>
+                            </div>                        
+                            <div class="close_btn">
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" disabled aria-label="Close"></button>  
+                            </div>                                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-top pt-3 mt-auto">
+                <div class="card p-3 border-0 w-100">
+                    <div class="d-flex justify-content-between mb-3">
+                        <span class="fw-normal">2 Products</span>
+                        <span class="fw-semibold text-dark">$26.00</span>
+                    </div>
+                    <div class="offCanvas_btns d-flex flex-column gap-2">
+                        <a href="#" target="_blank" class="btn checkout_btn bg_mainColor text-white rounded-pill fw-semibold">Checkout</a>
+                        <a href="#" target="_blank" class="btn go_cart_btn text_mainColor rounded-pill fw-semibold">Go To Cart</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <nav class="list-navbar navbar navbar-expand-lg bg-dark navbar-dark position-sticky" data-bs-theme="dark" style="top: 62px; z-index: 4;">
+        <div class="container font-poppins">                                
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+                    <li class="nav-item d-flex">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDownWhite.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" href="./shop.html">Shop</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" href="#">Pages</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" href="./blog.html">Blog</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" href="./aboutUs.html">About Us</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" href="#">Contact Us</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                </ul>
+                <span class="navbar-text text-white">
+                    <img src="./assets/general/PhoneCall.webp" alt="Phone Call Icon">
+                    (219) 555-0114
+                </span>
+            </div>
+        </div>
+    </nav>
+    
+<!---------------------------Ending of the header-------------------------------------------------------->
+<!---------------------------Starting of the main section------------------------------------------------>
+    <main>
+        <section class="hero">
+            <div class="container my-5 font-poppins">
+                <div class="row g-3">         
+                    <div class="col-md-8">
+                        <div class="promo-large position-relative overflow-hidden rounded-3">
+                            <img src="./assets/header/main_header_img.webp" class="img-fluid w-100 h-100 object-fit-cover" alt="Main Sales">
+                            
+                            <div class="promo-info position-absolute p-4 text-white">
+                                <h1>Fresh & Healthy <br> Organic Food</h1>
+                                <div class="sale-badge border-start ps-2">
+                                    <p class="mb-1">Sale up to <span class="badge">30% OFF</span></p>
+                                    <span class="badge-para fw-lighter">Free shipping on all your order.</span>
+                                </div>
+                                <a href="./shop.html" class="btn btn-light mt-4 fw-semibold">Shop Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="promo-small col-md-4  d-flex flex-column gap-3">
+
+                        <div class="promo position-relative overflow-hidden rounded-3">
+                            <img src="./assets/header/vegetables_BG.webp" class="img-fluid w-100 object-fit-cover" alt="Summer Sale">
+                            <div class="promo-info position-absolute top-0 start-0 p-3 text-dark">
+                                <span class="fw-medium">SUMMER SALE</span>
+                                <h5 class="fw-semibold fs-2">75% OFF</h5>
+                                <p class="vegetablesBG-info mb-3 fw-regular">Only Fruit & Vegetable</p>
+                                <a href="./shop.html" class="text_mainColor fw-bold text-decoration-none">Shop Now →</a>
+                            </div>
+                        </div>
+
+                        <div class="promo position-relative overflow-hidden rounded-3">
+                            <img src="./assets/header/plant_BG.webp" class="img-fluid w-100 object-fit-cover" alt="Best Deal">
+                            <div class="card-img-overlay promo-info position-absolute top-0 start-0 d-flex align-items-center justify-content-center text-center flex-column p-3 text-white">
+                                <span class="fw-medium">BEST DEAL</span>
+                                <h5 class="plantBG-title fw-semibold">Special Products Deal of the Month</h5>
+                                <a href="./shop.html" class="text_mainColor fw-bold text-decoration-none">Shop Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!---------------------------Ending of the main sales---------------------------------------------------->
+<!---------------------------Starting of featured section------------------------------------------------>
+        <section class="featured">
+            <div class="container my-2">
+                <div class="features-wrapper d-flex flex-nowrap overflow-x-auto gap-3 p-3 rounded">
+                    <div class="feature-card d-flex align-items-center flex-shrink-0 p-3 rounded">
+                        <img src="./assets/featured/delivery-truck.webp" class="featured-img me-3" alt="Shipping">
+                        <div>
+                            <h6 class="mb-1">Free Shipping</h6>
+                            <span class="text-body-secondary">Free shipping on all your order</span>
+                        </div>
+                    </div>
+
+                    <div class="feature-card d-flex align-items-center flex-shrink-0 p-3 rounded">
+                        <img src="./assets/featured/headphones.webp" class="featured-img me-3" alt="Customer Support">
+                        <div>
+                            <h6 class="mb-1">Customer Support 24/7</h6>
+                            <span class="text-body-secondary">Instant access to Support</span>
+                        </div>
+                    </div>
+
+                    <div class="feature-card d-flex align-items-center flex-shrink-0 p-3 rounded">
+                        <img src="./assets/featured/shopping-bag.webp" class="featured-img me-3" alt="Secure Payment">
+                        <div>
+                            <h6 class="mb-1">100% Secure Payment</h6>
+                            <span class="text-body-secondary">We ensure your money is save</span>
+                        </div>
+                    </div>
+
+                    <div class="feature-card d-flex align-items-center flex-shrink-0 p-3 rounded">
+                        <img src="./assets/featured/package.webp" class="featured-img me-3" alt="Returns Guarantee">
+                        <div>
+                            <h6 class="mb-1">Money-Back Guarantee</h6>
+                            <span class="text-body-secondary">30 Days Money-Back Guarantee</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+<!---------------------------Ending of featured section---------------------------------------------->
+<!---------------------------Starting of the Popular Categories section------------------------------------------------>
+        <section class="popular_categories py-4">
+            <div class="container my-5 font-poppins">
+                <div class="categories_title d-flex justify-content-between mb-3">
+                    <h2 class="fw-semibold">Popular Categories</h2>
+                    <div class="viewAll_btn">
+                        <a href="./shop.html">
+                            <img src="./assets/popular_categories/ViewAllButton.webp" alt="View All Button" class="border-0 outline-none bg-transparent" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row g-3">                    
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="./shop.html" class="text-decoration-none" target="_blank">
+                            <div class="card h-100 text-center border-1">
+                                <img src="./assets/popular_categories/FreshFruit.webp" class="card-img-top" alt="Fresh Fruit">
+                                <div class="card-body p-2">
+                                    <p class="card-text fw-medium m-0">Fresh Fruit</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="./shop.html" class="text-decoration-none" target="_blank">
+                            <div class="card h-100 text-center border-1">
+                                <img src="./assets/popular_categories/FreshVegetables.webp" class="card-img-top" alt="Fresh Vegetables">
+                                <div class="card-body p-2">
+                                    <p class="card-text fw-medium m-0">Fresh Vegetables</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="./shop.html" class="text-decoration-none" target="_blank">
+                            <div class="card h-100 text-center border-1">
+                                <img src="./assets/popular_categories/MeatFish.webp" class="card-img-top" alt="Meat & Fish">
+                                <div class="card-body p-2">
+                                    <p class="card-text fw-medium m-0">Meat & Fish</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="./shop.html" class="text-decoration-none" target="_blank">
+                                <div class="card h-100 text-center border-1">
+                                <img src="./assets/popular_categories/Snacks.webp" class="card-img-top" alt="Snacks">
+                                <div class="card-body p-2">
+                                    <p class="card-text fw-medium m-0">Snacks</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="./shop.html" class="text-decoration-none" target="_blank">
+                            <div class="card h-100 text-center border-1">
+                                <img src="./assets/popular_categories/Beverages.webp" class="card-img-top" alt="Beverages">
+                                <div class="card-body p-2">
+                                    <p class="card-text fw-medium m-0">Beverages</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="./shop.html" class="text-decoration-none" target="_blank">
+                            <div class="card h-100 text-center border-1">
+                                <img src="./assets/popular_categories/BeautyHealth.webp" class="card-img-top" alt="Beauty & Health">
+                                <div class="card-body p-2">
+                                    <p class="card-text fw-medium m-0">Beauty & Health</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="./shop.html" class="text-decoration-none" target="_blank">
+                            <div class="card h-100 text-center border-1">
+                                <img src="./assets/popular_categories/BreadBakery.webp" class="card-img-top" alt="Bread & Bakery">
+                                <div class="card-body p-2">
+                                    <p class="card-text fw-medium m-0">Bread & Bakery</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="./shop.html" class="text-decoration-none" target="_blank">
+                            <div class="card h-100 text-center border-1">
+                                <img src="./assets/popular_categories/BakingNeeds.webp" class="card-img-top" alt="Baking Needs">
+                                <div class="card-body p-2">
+                                    <p class="card-text fw-medium m-0">Baking Needs</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="./shop.html" class="text-decoration-none" target="_blank">
+                            <div class="card h-100 text-center border-1">
+                                <img src="./assets/popular_categories/Cooking.webp" class="card-img-top" alt="Cooking">
+                                <div class="card-body p-2">
+                                    <p class="card-text fw-medium m-0">Cooking</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="./shop.html" class="text-decoration-none" target="_blank">
+                            <div class="card h-100 text-center border-1">
+                                <img src="./assets/popular_categories/DiabeticFood.webp" class="card-img-top" alt="Diabetic Food">
+                                <div class="card-body p-2">
+                                    <p class="card-text fw-medium m-0">Diabetic Food</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="./shop.html class="text-decoration-none" target="_blank">
+                            <div class="card h-100 text-center border-1">
+                                <img src="./assets/popular_categories/DishDetergents.webp" class="card-img-top" alt="Dish Detergents">
+                                <div class="card-body p-2">
+                                    <p class="card-text fw-medium m-0">Dish Detergents</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="./shop.html" class="text-decoration-none" target="_blank">
+                            <div class="card h-100 text-center border-1">
+                                <img src="./assets/popular_categories/Oil.webp" class="card-img-top" alt="Oil">
+                                <div class="card-body p-2">
+                                    <p class="card-text fw-medium m-0">Oil</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!---------------------------Ending of Popular Categories section---------------------------------------------->
+<!---------------------------Starting of the Popular Products section------------------------------------------>
+        <section class="popular_products py-4">
+            <div class="container my-3 font-poppins">
+                <div class="popular_products_title d-flex justify-content-between mb-3">
+                    <h2 class="fw-semibold">Popular Products</h2>
+                    <div class="viewAll_btn">
+                        <a href="./shop.html">
+                            <img src="./assets/popular_categories/ViewAllButton.webp" alt="View All Button" class="border-0 outline-none bg-transparent" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-5 g-0 justify-content-center">                                        
+                    <div class="popular_product_card col">                           
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">
+                                <div class="pop_product-sale position-absolute bg-danger z-1 text-white small fw-normal rounded-1">
+                                    <span>Sale 50%</span>
+                                </div>
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/greenApple.webp" class="product_pop_img card-img-top p-3" alt="Green Apple">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Green Apple</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$14.99</span>
+                                        <span class="price_line_through text-decoration-line-through fw-normal text-nowrap">$20.99</span>
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                                                
+                    </div>
+                    
+                    <div class="popular_product_card col">                           
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">                                    
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/FreshIndianMalta.webp" class="product_pop_img card-img-top p-3" alt="Fresh Indian Malta">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Fresh Indian Malta</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$20.00</span>                                            
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                          
+                    </div>
+                    
+                    <div class="popular_product_card col">
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">                                    
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/ChineseCabbage.webp" class="product_pop_img card-img-top p-3" alt="Chinese Cabbage">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Chinese Cabbage</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$12.00</span>                                                
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                         
+                    </div>
+
+                    <div class="popular_product_card col">                          
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">                                    
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/GreenLettuce.webp" class="product_pop_img card-img-top p-3" alt="Green Lettuce">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Green Lettuce</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$9.00</span>
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                                                                       
+                    </div>
+
+                    <div class="popular_product_card col">                        
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">                                    
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/Eggplant.webp" class="product_pop_img card-img-top p-3" alt="Eggplant">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Eggplant</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$34.00</span>                                             
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                            
+                    </div>
+
+                    <div class="popular_product_card col">                       
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">                                    
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/BigPotatoes.webp" class="product_pop_img card-img-top p-3" alt="Big Potatoes">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Big Potatoes</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$20.00</span>                                              
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                                               
+                    </div>
+
+                    <div class="popular_product_card col">                         
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">                                    
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/Corn.webp" class="product_pop_img card-img-top p-3" alt="Corn">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Corn</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$20.00</span>                                                
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                                               
+                    </div>
+
+                    <div class="popular_product_card col">                        
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">                                    
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/FreshCauliflower.webp" class="product_pop_img card-img-top p-3" alt="Fresh Cauliflower">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Fresh Cauliflower</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$12.00</span>                                                
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                                                
+                    </div>
+
+                    <div class="popular_product_card col">                        
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">
+                                <div class="pop_product-sale position-absolute bg-danger z-1 text-white small fw-normal rounded-1">
+                                    <span>Sale 50%</span>
+                                </div>
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/GreenCapsicum.webp" class="product_pop_img card-img-top p-3" alt="Green Capsicum">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Green Capsicum</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$9.00</span>
+                                        <span class="price_line_through text-decoration-line-through fw-normal text-nowrap">$20.99</span>
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+  
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                                               
+                    </div>
+
+                    <div class="popular_product_card col">                       
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">                                    
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/GreenChili.webp" class="product_pop_img card-img-top p-3" alt="Green Chili">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Green Chili</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$34.00</span>                                               
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                                                
+                    </div>
+
+                </div>
+            </div>
+        </section>            
+<!---------------------------Ending of Popular Products section---------------------------------------------->        
+<!-------------------------Modal code---------------------------------------->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-fullscreen-lg-down">
+                <div class="modal-content border-0 rounded">
+                    <div class="modal-body p-4">
+                        <div class="row g-4">                        
+                            <div class="col-md-6 d-flex gap-3">                             
+                                <div class="d-flex flex-column align-items-center h-100 gap-2">
+                                    <button class="btn p-1"><i class="fa-solid fa-chevron-up"></i></button>
+                                    <img src="./assets/modal/modal_chineseCabbage1.webp" class="img-thumbnail border border-success" style="width: 80px; height: 90px; object-fit: cover;" alt="Thumb 1">
+                                    <img src="./assets/modal/modal_chineseCabbage2.webp" class="img-thumbnail" style="width: 80px; height: 90px; object-fit: cover;" alt="Thumb 2">
+                                    <img src="./assets/modal/modal_chineseCabbage3.webp" class="img-thumbnail" style="width: 80px; height: 90px; object-fit: cover;" alt="Thumb 3">
+                                    <img src="./assets/modal/modal_chineseCabbage4.webp" class="img-thumbnail" style="width: 80px; height: 90px; object-fit: cover;" alt="Thumb 3">                                    
+                                    <button class="btn p-1"><i class="fa-solid fa-chevron-down"></i></button>
+                                </div>
+
+                                <div class="flex-grow-1">
+                                    <img src="./assets/modal/modal_chineseCabbage.webp" class="img-fluid rounded w-100 h-100" alt="Chinese Cabbage">
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6 font-poppins">
+                                <div class="modal_main_title_price border-bottom">
+                                    <div class="madal_title d-flex flex-row align-items-center gap-2">
+                                        <h2 class="fw-semibold">Chinese Cabbage</h2>
+                                        <small class="modal_stock text_mainColor p-1 fw-normal">In Stock</small>
+                                    </div>
+                                    
+                                    <div class="modal_reviews d-flex flex-row gap-3 align-items-center">
+                                        <div class="text-warning small d-flex justify-content-start gap-1">
+                                            &#9733;&#9733;&#9733;&#9733;&#9733;<span class="text-secondary fw-normal small">4 Review</span>
+                                        </div>
+                                        <span class="text-secondary fs-5">•</span>
+                                        <p class="fw-medium mb-1">SKU: <span class="fw-normal text-secondary">2,51,594</span></p>
+                                    </div>
+
+                                    <div class="modal_prices mb-3 d-flex flex-row align-items-center">                                
+                                        <span class="modal_old_price text-decoration-line-through me-2 fs-5">$48.00</span>
+                                        <span class="modal_new_price fw-semibold fs-4">$17.28</span>
+                                        <small class="badge fw-medium p-2 ms-3">64% Off</small>
+                                    </div>
+                                </div>
+
+                                <div class="modal_main_info border-bottom my-3">
+                                    <div class="modal_brand_share d-flex justify-content-between my-2">
+                                        <div class="modal_brand">
+                                            <small class="fw-normal mb-1">Brand: <img src="./assets/modal/brand_farmary.webp" class="img-fluid" alt="Farmary Brand"></small>
+                                        </div>
+                                        <div class="modal_social">
+                                            <small class="fw-normal mb-1">Share item:</small>
+                                            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f d-inline-flex align-items-center justify-content-center"></i></a>
+                                            <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter d-inline-flex align-items-center justify-content-center"></i></a>
+                                            <a href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest-p d-inline-flex align-items-center justify-content-center"></i></a>
+                                            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram d-inline-flex align-items-center justify-content-center"></i></a>
+                                        </div>    
+                                    </div>
+                                    <div class="modal_info my-1">
+                                        <p class="small text-secondary fw-normal">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar. </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="modal_add_card d-flex flex-row justify-content-start align-items-center gap-1">
+                                    <div class="input-group rounded-pill mt-1 py-0 border shadow-sm overflow-hidden d-flex align-items-center justify-content-center" style="width: 120px; height: 50px;">
+                                        <button class="btn border-0 d-flex align-items-center justify-content-center rounded-circle" type="button" style="width: 20px; height: 20px;">–</button>
+                                        <input type="number" class="form-control border-0 text-center fw-bold px-0" value="1" min="1" style="width: 30px; font-size: 1rem;" />
+                                        <button class="btn border-0 d-flex align-items-center justify-content-center rounded-circle" type="button" style="width: 20px; height: 20px;">+</button>
+                                    </div>
+                                    <div class="modal_btn w-100">
+                                        <button class="btn px-4 py-2 shadow-sm fw-semibold rounded-pill w-100 d-flex align-items-center justify-content-center gap-2">Add to Cart<a href="#"><img src="./assets/general/cart_white.webp" class="popular_product_cart ms-2" alt="Cart Icon"></a></button>                                        
+                                    </div>
+                                    <div class="modal_whishList">
+                                        <button class="p-0 border-0 bg-transparent"><i class="fa-regular fa-heart p-2"></i></button>
+                                    </div>
+                                </div>                               
+
+                                <div class="modal_tags d-flex flex-column border-top my-3">                                    
+                                    <small class="fw-medium mt-3">Category: <small class="fw-normal text-secondary">Vegetables</small></small>
+                                    <small class="d-flex flex-row gap-1 fw-medium mt-2">Tags: <small class="fw-normal text-secondary d-flex flex-row gap-1 align-items-center"><span>Vegetables</span><span>Healthy</span><span>Chinese</span><span>Cabbage</span><span>Green Cabbage</span></small></small>                            
+                                </div>
+                           
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer border-top">
+                        <button type="button" class="btn modal_footer_btn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>    
+<!---------------------------Ending of Popular Products section---------------------------------------------->
+<!---------------------------Starting of the sales  section-------------------------------------------------->
+        <section class="sales container py-5 font-poppins">
+            <div class="row g-4">            
+                <div class="col-lg-4 col-md-6">
+                    <div class="sales_cards month_sale_card position-relative text-center text-white p-4 rounded-3">
+                        <div class="position-relative mt-3 z-1">
+                            <p class="small fw-medium text-uppercase mb-3">Best Deals</p>
+                            <h2 class="fw-semibold mb-3">Sale of the Month</h2>
+                            <div class="d-flex justify-content-center align-items-center gap-3 fw-semibold mb-4">
+                                
+                                <div class="sales_timing d-flex flex-column align-items-center fw-normal">
+                                    <span class="num">00</span>
+                                    <small class="timing">Days</small>
+                                </div>
+                                <span class="fs-5">:</span>
+                                <div class="sales_timing d-flex flex-column align-items-center fw-normal">
+                                    <span class="num">02</span>
+                                    <small class="timing">Hours</small>
+                                </div>
+                                <span class="fs-5">:</span>
+                                <div class="sales_timing d-flex flex-column align-items-center fw-normal">
+                                    <span class="num">18</span>
+                                    <small class="timing">Mins</small>
+                                </div>
+                                <span class="fs-5">:</span>
+                                <div class="sales_timing d-flex flex-column align-items-center fw-normal">
+                                    <span class="num">46</span>
+                                    <small class="timing">Secs</small>
+                                </div>
+                            </div>
+                            <a href="./shop.html" class="btn bg-white fw-semibold px-4 py-2 rounded-pill">Shop Now →</a>
+                        </div>
+                        <div class="sales_box position-absolute top-0 start-0 w-100 h-100"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="sales_cards low_fat_card position-relative text-center text-white p-4 rounded-3">
+                        <div class="position-relative mt-3 z-1">
+                            <p class="small fw-medium text-uppercase mb-3">85% Fat Free</p>
+                            <h2 class="fw-semibold mb-3">Low-Fat Meat</h2>
+                            <p class="mb-3 fw-normal">Started at <span class="text-warning fw-semibold">$79.99</span></p>
+                            <a href="./shop.html" class="btn bg-white fw-semibold px-4 py-2 mt-4 rounded-pill">Shop Now →</a>
+                        </div>
+                        <div class="sales_box position-absolute top-0 start-0 w-100 h-100"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <div class="sales_cards fresh_fruit_card position-relative text-center text-dark p-4 rounded-3">
+                        <div class="position-relative mt-3 z-1">
+                            <p class="small fw-medium text-uppercase mb-3">Summer Sale</p>
+                            <h2 class="fw-semibold mb-3">100% Fresh Fruit</h2>
+                            <p class="mb-3 fw-normal">Up to <span class="badge bg-dark text-warning fw-semibold fs-6">64% OFF</span></p>
+                            <a href="./shop.html" class="btn bg-white fw-semibold px-4 py-2 mt-4 rounded-pill">Shop Now →</a>
+                        </div>
+                        <div class="sales_box position-absolute top-0 start-0 w-100 h-100"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+<!---------------------------Ending of Sales section---------------------------------------------->
+<!---------------------------Starting of the Hot Deals section------------------------------------>
+        <section class="hot_deals py-4">
+            <div class="container my-3 font-poppins">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="fw-bold">Hot Deals</h2>
+                    <a href="./shop.html">
+                        <img src="./assets/popular_categories/ViewAllButton.webp" alt="View All Button" class="border-0 outline-none bg-transparent" />
+                    </a>
+                </div>
+
+                <div class="row g-0">                
+                    <div class="col-lg-6">
+                        <div class="big_card h-100">
+                            <div class="card border-1 shadow-lg h-100 p-3 text-center position-relative overflow-hidden">
+                                <div class="position-absolute top-0 start-0 d-flex gap-1 p-2 ms-3 mt-3 z-1">
+                                    <span class="hot_deals_sale badge bg-danger fw-normal">Sale 50%</span>
+                                    <span class="hot_deals_sale badge bg-primary fw-normal">Best Sale</span>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <img src="./assets/popular_products/GreenApple_hotDeals.webp" class="hot_deals_img w-100 mb-3" alt="Apple" style="width: 525px; height: 446px;">
+                                </div>
+                                <div class="top_deals_img_info d-flex justify-content-between position-relative gap-2 mb-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle_icon bg-light rounded-5 p-2" alt="Add To Whishlist"></a>
+                                    <button class="btn px-4 shadow-sm fw-semibold w-100 rounded-pill">Add to Cart<img src="./assets/general/cart_white.webp" class="popular_product_cart ms-2" alt="Cart Icon"></button>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle_icon bg-light rounded-5 p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>                                    
+                                </div>
+                                <div class="hot_deals_title_info">
+                                    <h6 class="hot_deals_title mb-1 fw-normal">Green Apple</h6>
+                                    <h4 class="hot_deals_prices fw-medium text-dark">$12.00 <span class="text-decoration-line-through text-secondary">$24.00</span></h4>
+                                </div>
+                                                            
+                                <div class="text-warning small d-flex justify-content-center">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span><span class="hot_deals_feedback text-dark-emphasis">(524 Feedback)</span>
+                                </div>
+
+                                <div class="text-center small text-muted">
+                                    <span>Hurry up! Offer ends in:</span>
+                                    <div class="d-flex justify-content-center gap-3 mt-1">
+                                    <div><strong>01</strong><br><small>DAYS</small></div>
+                                    <div><strong>23</strong><span class="ps-4">:</span><br><small>HOURS</small></div>
+                                    <div><strong>34</strong><span class="ps-4">:</span><br><small>MINS</small></div>
+                                    <div><strong>57</strong><br><small>SECS</small></div>
+                                    </div>
+                                </div>
+                                <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                            </div>
+                        </div>
+                    </div>                    
+                    
+                    <div class="col-lg-6 d-flex flex-column">
+                        <div class="row g-0 flex-fill">
+                            <div class="popular_product_card col-4">
+                                <div class="common_info card h-100 border-1 position-relative overflow-hidden">                        
+                                    <div class="popular_product_img position-relative">                                    
+                                        <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                            <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                            <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                        </div>
+                                        <img src="./assets/popular_products/ChineseCabbage.webp" class="product_pop_img card-img-top p-3" alt="Chinese Cabbage">                                    
+                                    </div>
+                                    
+                                    <div class="card_content card-body p-3">
+                                        <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Chinese Cabbage</h3>
+                                        
+                                        <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                            <div class="product_prices">
+                                                <span class="text-dark fw-medium text-nowrap">$12.00</span>                                                
+                                            </div>
+                                            <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                        </div>
+                                        
+                                        <div class="text-warning small d-flex justify-content-start">
+                                            &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                        </div>
+                                    </div>
+                                    <a href="./product_details.html" class="stretched-link" target="_blank"></a>                                    
+                                </div>                                                         
+                            </div>                            
+                            
+                            <div class="popular_product_card col-4">                          
+                                <div class="common_info card h-100 border-1 position-relative overflow-hidden">                        
+                                    <div class="popular_product_img position-relative">                                    
+                                        <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                            <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                            <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                        </div>
+                                        <img src="./assets/popular_products/GreenLettuce.webp" class="product_pop_img card-img-top p-3" alt="Green Lettuce">                                    
+                                    </div>
+                                    
+                                    <div class="card_content card-body p-3">
+                                        <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Green Lettuce</h3>
+                                        
+                                        <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                            <div class="product_prices">
+                                                <span class="text-dark fw-medium text-nowrap">$9.00</span>
+                                            </div>
+                                            <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                        </div>
+
+                                        <div class="text-warning small d-flex justify-content-start">
+                                            &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                        </div>
+                                    </div>
+                                    <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                                </div>                                                                               
+                            </div>
+
+                            <div class="popular_product_card col-4">                        
+                                <div class="common_info card h-100 border-1 position-relative overflow-hidden">                        
+                                    <div class="popular_product_img position-relative">                                    
+                                        <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                            <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                            <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                        </div>
+                                        <img src="./assets/popular_products/Eggplant.webp" class="product_pop_img card-img-top p-3" alt="Eggplant">                                    
+                                    </div>
+                                    
+                                    <div class="card_content card-body p-3">
+                                        <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Eggplant</h3>
+                                        
+                                        <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                            <div class="product_prices">
+                                                <span class="text-dark fw-medium text-nowrap">$34.00</span>                                             
+                                            </div>
+                                            <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                        </div>
+
+                                        <div class="text-warning small d-flex justify-content-start">
+                                            &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                        </div>
+                                    </div>
+                                    <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                                </div>                            
+                            </div>
+                        </div>
+
+                        <div class="row g-0 flex-fill">
+                            <div class="popular_product_card col-4">                        
+                                <div class="common_info card h-100 border-1 position-relative overflow-hidden">                        
+                                    <div class="popular_product_img position-relative">                                    
+                                        <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                            <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                            <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                        </div>
+                                        <img src="./assets/popular_products/FreshCauliflower.webp" class="product_pop_img card-img-top p-3" alt="Fresh Cauliflower">                                    
+                                    </div>
+                                    
+                                    <div class="card_content card-body p-3">
+                                        <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Fresh Cauliflower</h3>
+                                        
+                                        <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                            <div class="product_prices">
+                                                <span class="text-dark fw-medium text-nowrap">$12.00</span>                                                
+                                            </div>
+                                            <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                        </div>
+
+                                        <div class="text-warning small d-flex justify-content-start">
+                                            &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                        </div>
+                                    </div>
+                                    <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                                </div>                                                
+                            </div>
+
+                            <div class="popular_product_card col-4">                        
+                                <div class="common_info card h-100 border-1 position-relative overflow-hidden">                        
+                                    <div class="popular_product_img position-relative">
+                                        <div class="pop_product-sale position-absolute bg-danger z-1 text-white small fw-normal rounded-1">
+                                            <span>Sale 50%</span>
+                                        </div>
+                                        <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                            <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                            <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                        </div>
+                                        <img src="./assets/popular_products/GreenCapsicum.webp" class="product_pop_img card-img-top p-3" alt="Green Capsicum">                                    
+                                    </div>
+                                    
+                                    <div class="card_content card-body p-3">
+                                        <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Green Capsicum</h3>
+                                        
+                                        <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                            <div class="product_prices d-flex gap-1">
+                                                <span class="text-dark fw-medium text-nowrap">$9.00</span>
+                                                <span class="price_line_through text-decoration-line-through fw-normal text-nowrap">$20.99</span>
+                                            </div>
+                                            <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                        </div>
+ 
+                                        <div class="text-warning small d-flex justify-content-start">
+                                            &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                        </div>
+                                    </div>
+                                    <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                                </div>                                               
+                            </div>
+
+                            <div class="popular_product_card col-4">                       
+                                <div class="common_info card h-100 border-1 position-relative overflow-hidden">                        
+                                    <div class="popular_product_img position-relative">                                    
+                                        <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                            <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                            <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                        </div>
+                                        <img src="./assets/popular_products/GreenChili.webp" class="product_pop_img card-img-top p-3" alt="Green Chili">                                    
+                                    </div>
+                                    
+                                    <div class="card_content card-body p-3">
+                                        <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Green Chili</h3>
+                                        
+                                        <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                            <div class="product_prices">
+                                                <span class="text-dark fw-medium text-nowrap">$34.00</span>                                               
+                                            </div>
+                                            <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                        </div>
+                                        
+                                        <div class="text-warning small d-flex justify-content-start">
+                                            &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                        </div>
+                                    </div>
+                                    <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                                </div>                                                
+                            </div>
+                        </div>                                                                                                 
+                    </div>                
+                </div>
+                
+                <div class="row g-0 mt-0">   
+                    <div class="popular_product_card col-4 col-md-2-4 col-sm-4">                       
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">                                    
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/BigPotatoes.webp" class="product_pop_img card-img-top p-3" alt="Big Potatoes">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Big Potatoes</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$12.00</span>                                              
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                                               
+                    </div>
+
+                    <div class="popular_product_card col-4 col-md-2-4 col-sm-4">                         
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">                                    
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/Corn.webp" class="product_pop_img card-img-top p-3" alt="Corn">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Corn</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$12.00</span>                                                
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+                                
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                                               
+                    </div>
+                    
+                    <div class="popular_product_card col-4 col-md-2-4 col-sm-4">                         
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">                                    
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/RedChili.webp" class="product_pop_img card-img-top p-3" alt="Corn">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Red Chili</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$12.00</span>                                                
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+                                                                
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                                               
+                    </div>
+
+                    <div class="popular_product_card col-4 col-md-2-4 col-sm-4">                        
+                        <div class="card h-100 border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">
+                                <div class="pop_product-sale position-absolute bg-danger z-1 text-white small fw-normal rounded-1">
+                                    <span>Sale 50%</span>
+                                </div>
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/RedTomatos.webp" class="product_pop_img card-img-top p-3" alt="Green Capsicum">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Red Tomatos</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices d-flex gap-1">
+                                        <span class="text-dark fw-medium text-nowrap">$9.00</span>
+                                        <span class="price_line_through text-decoration-line-through fw-normal text-nowrap">$20.99</span>
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                                               
+                    </div>
+
+                    <div class="popular_product_card col-4 col-md-2-4 col-sm-4">                       
+                        <div class="card h-100 border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">                                    
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/SurjapurMango.webp" class="product_pop_img card-img-top p-3" alt="Green Chili">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Surjapur Mango</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$34.00</span>                                               
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+      
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                                                
+                    </div>
+                    
+                </div>     
+                        
+            </div>
+        </section>
+<!---------------------------Ending of Hot Deals section----------------------------------------------->
+<!---------------------------Starting of the Summer Sale BG section------------------------------------>
+        <section class="summer_sale_BG py-5">
+            <div class="container disscount_bannar_img">
+                <div class="row justify-content-end">
+                    <div class="col-6">
+                        <div class="summer_BG_content ps-5 pe-3 text-white rounded-4">
+                            <h6 class="text-uppercase fw-medium">Summer Sale</h6>
+                            <h2 class="fw-semibold mb-2 fs-1">
+                                <span class="text-warning">37%</span> OFF
+                            </h2>
+                            <p class="small mb-4">Free on all your order, Free Shipping and 30 days money-back guarantee</p>
+                            <a href="./shop.html" target="_blank" class="btn bg_mainColor text-white rounded-pill px-4">Shop Now  → </a>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </section>
+<!---------------------------Ending of Summer Sale BG section--------------------------------------------->
+<!---------------------------Starting of the Featured Products section------------------------------------>
+        <section class="featured_products py-4">
+            <div class="container my-3 font-poppins">
+                <div class="popular_products_title d-flex justify-content-between mb-3">
+                    <h2 class="fw-semibold">Featured Products</h2>
+                    <div class="viewAll_btn">
+                        <a href="./shop.html">
+                            <img src="./assets/popular_categories/ViewAllButton.webp" alt="View All Button" class="border-0 outline-none bg-transparent" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-5 g-0 justify-content-center">                                        
+                    <div class="popular_product_card col">                           
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">
+                                <div class="pop_product-sale position-absolute bg-danger z-1 text-white small fw-normal rounded-1">
+                                    <span>Sale 50%</span>
+                                </div>
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/greenApple.webp" class="product_pop_img card-img-top p-3" alt="Green Apple">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Green Apple</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$14.99</span>
+                                        <span class="price_line_through text-decoration-line-through fw-normal text-nowrap">$20.99</span>
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+ 
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                                                
+                    </div>
+                    
+                    <div class="popular_product_card col">                           
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">                                    
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/FreshIndianMalta.webp" class="product_pop_img card-img-top p-3" alt="Fresh Indian Malta">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Fresh Indian Malta</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$20.00</span>                                            
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                          
+                    </div>
+                    
+                    <div class="popular_product_card col">
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">                                    
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/ChineseCabbage.webp" class="product_pop_img card-img-top p-3" alt="Chinese Cabbage">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Chinese Cabbage</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$12.00</span>                                                
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+              
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                         
+                    </div>
+
+                    <div class="popular_product_card col">                          
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">                                    
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/GreenLettuce.webp" class="product_pop_img card-img-top p-3" alt="Green Lettuce">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Green Lettuce</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$9.00</span>
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+                       
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                                                                       
+                    </div>
+
+                    <div class="popular_product_card col">                        
+                        <div class="card h-100 text-center border-1 position-relative overflow-hidden">                        
+                            <div class="popular_product_img position-relative">                                    
+                                <div class="hover_icons position-absolute d-flex flex-column gap-2 mr-3">
+                                    <a class="wishlist-btn d-inline-block"><img src="./assets/popular_products/Heart.webp" class="circle-icon bg-white text-dark p-2" alt="Add To Whishlist"></a>
+                                    <a><img src="./assets/popular_products/Eye.webp" class="circle-icon bg-white text-dark p-2" alt="Quick View" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></a>
+                                </div>
+                                <img src="./assets/popular_products/Eggplant.webp" class="product_pop_img card-img-top p-3" alt="Eggplant">                                    
+                            </div>
+                            
+                            <div class="card_content card-body p-3">
+                                <h3 class="card-text fw-normal m-0 d-flex justify-content-start">Eggplant</h3>
+                                
+                                <div class="card-text text-muted mb-1 d-flex flex-nowrap align-items-center justify-content-between gap-1">
+                                    <div class="product_prices">
+                                        <span class="text-dark fw-medium text-nowrap">$34.00</span>                                             
+                                    </div>
+                                    <button class="p-0 border-0 bg-transparent"><img src="./assets/popular_products/Bag.webp" class="popular_product_cart" alt="Cart Icon"></button>
+                                </div>
+    
+                                <div class="text-warning small d-flex justify-content-start">
+                                    &#9733;&#9733;&#9733;&#9733;<span class="text-muted">&#9733;</span>
+                                </div>
+                            </div>
+                            <a href="./product_details.html" class="stretched-link" target="_blank"></a>
+                        </div>                            
+                    </div>                                                                                                                  
+                </div>
+                
+            </div>
+        </section>
+<!---------------------------Ending of Featured Products section------------------------------------>
+<!---------------------------Starting of the Latest News section------------------------------------>
+        <section class="latest_news py-4">
+            <div class="container my-3 font-poppins">
+                <h2 class="fw-semibold text-center mb-4">Latest News</h2>
+                <div class="row row-cols-1 row-cols-md-3 g-4 gy-4">
+                    
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="card h-100">
+                            <div class="position-relative">
+                                <img src="./assets/latestNews/oranges.webp" class="card-img-top" alt="Oranges">
+                                <small class="date position-absolute d-flex flex-column bg-light text-dark px-3 text-center py-2 small fw-medium rounded">
+                                    18 <span class="text-muted">NOV</span> 
+                                </small>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex flex-wrap gap-3 small text-muted mb-2">                                    
+                                    <span><img src="./assets/latestNews/food_sign.webp" alt="Aategory"> Food</span>
+                                    <span><img src="./assets/latestNews/admin_sign.webp" alt="Author"> By Admin</span>
+                                    <span><img src="./assets/latestNews/comment_sign.webp" alt="Comment"> 65 Comments</span>
+                                </div>
+                                
+                                <p class="card-text fw-medium">Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.</p>
+                                <a href="./single_blog.html" class="text_mainColor text-decoration-none fw-semibold">Read More →</a>
+                            </div>
+                        </div>                        
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="card h-100">
+                            <div class="position-relative">
+                                <img src="./assets/latestNews/eggs.webp" class="card-img-top" alt="Egg Dish">
+                                <small class="date position-absolute d-flex flex-column bg-light text-dark px-3 text-center py-2 small fw-medium rounded">
+                                    29 <span class="text-muted">JAN</span> 
+                                </small>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex flex-wrap gap-3 small text-muted mb-2">                                    
+                                    <span><img src="./assets/latestNews/food_sign.webp" alt="Aategory"> Food</span>
+                                    <span><img src="./assets/latestNews/admin_sign.webp" alt="Author"> By Admin</span>
+                                    <span><img src="./assets/latestNews/comment_sign.webp" alt="Comment"> 65 Comments</span>
+                                </div>
+                                
+                                <p class="card-text fw-medium">Eget lobortis lorem lacinia. Vivamus pharetra semper,</p>
+                                <a href="./single_blog.html" class="text_mainColor text-decoration-none fw-semibold">Read More →</a>
+                            </div>
+                        </div>                        
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="card h-100">
+                            <div class="position-relative">
+                                <img src="./assets/latestNews/vegetables.webp" class="card-img-top" alt="Vegetables Dish">
+                                <small class="date position-absolute d-flex flex-column bg-light text-dark px-3 text-center py-2 small fw-medium rounded">
+                                    21 <span class="text-muted">FEB</span> 
+                                </small>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex flex-wrap gap-3 small text-muted mb-2">                                    
+                                    <span><img src="./assets/latestNews/food_sign.webp" alt="Aategory"> Food</span>
+                                    <span><img src="./assets/latestNews/admin_sign.webp" alt="Author"> By Admin</span>
+                                    <span><img src="./assets/latestNews/comment_sign.webp" alt="Comment"> 65 Comments</span>
+                                </div>
+                                
+                                <p class="card-text fw-medium">Maecenas blandit risus elementum mauris malesuada.</p>
+                                <a href="./single_blog.html" class="text_mainColor text-decoration-none fw-semibold">Read More →</a>
+                            </div>
+                        </div>                        
+                    </div>
+
+                </div>
+            </div>
+        </section>
+<!---------------------------Ending of Latest News section------------------------------------------>
+<!---------------------------Starting of Client Testimonials News section--------------------------->
+        <section class="client_testimonials py-4">
+            <div class="container font-poppins">                
+                <h2 class="fw-semibold my-4">Client Testimonials</h2>                                
+                <div class="row d-none d-lg-flex g-3">
+                    <div class="col-lg-4">
+                        <div class="testimonial_card bg-white rounded-3 shadow-sm p-4 h-100">
+                            <div class="fs-2 mb-2">
+                                <img src="./assets/clientTestimonials/quotation_icon.webp" alt="Quotation Icon">
+                            </div>
+                            
+                            <p class="text-body-secondary fw-normal">
+                                Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. 
+                                Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales.
+                                Donec sed neque eget.
+                            </p>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center mt-4">
+                                    <img src="./assets/clientTestimonials/RobertFox.webp" alt="Robert Fox" class="testimonial_img rounded-circle me-3">
+                                    <div>
+                                    <h6 class="mb-0 fw-medium pt-2">Robert Fox</h6>
+                                    <small class="text-muted fw-normal">Customer</small>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-warning fs-4 d-flex pt-4">
+                                    &#9733;&#9733;&#9733;&#9733;&#9733;
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial_card bg-white rounded-3 shadow-sm p-4 h-100">
+                            <div class="fs-2 mb-2">
+                                <img src="./assets/clientTestimonials/quotation_icon.webp" alt="Quotation Icon">
+                            </div>
+                            
+                            <p class="text-body-secondary fw-normal">
+                                Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. 
+                                Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales.
+                                Donec sed neque eget.
+                            </p>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center mt-4">
+                                    <img src="./assets/clientTestimonials/DianneRussell.webp" alt="Dianne Russell" class="testimonial_img rounded-circle me-3">
+                                    <div>
+                                    <h6 class="mb-0 fw-medium pt-2">Dianne Russell</h6>
+                                    <small class="text-muted fw-normal">Customer</small>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-warning fs-4 d-flex pt-4">
+                                    &#9733;&#9733;&#9733;&#9733;&#9733;
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial_card bg-white rounded-3 shadow-sm p-4 h-100">
+                            <div class="fs-2 mb-2">
+                                <img src="./assets/clientTestimonials/quotation_icon.webp" alt="Quotation Icon">
+                            </div>
+                            
+                            <p class="text-body-secondary fw-normal">
+                                Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. 
+                                Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales.
+                                Donec sed neque eget.
+                            </p>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center mt-4">
+                                    <img src="./assets/clientTestimonials/EleanorPena.webp" alt="Eleanor Pena" class="testimonial_img rounded-circle me-3">
+                                    <div>
+                                    <h6 class="mb-0 fw-medium pt-2">Eleanor Pena</h6>
+                                    <small class="text-muted fw-normal">Customer</small>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-warning fs-4 d-flex pt-4">
+                                    &#9733;&#9733;&#9733;&#9733;&#9733;
+                                </div>
+                            </div>    
+                        </div>
+                    </div>                                            
+                </div>
+
+                <div  id="carouselExampleInterval" class="carousel slide d-lg-none" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="3000">                            
+                            <div class="testimonial_card bg-white rounded-3 shadow-sm p-4 h-100">
+                                <div class="fs-2 mb-2">
+                                    <img src="./assets/clientTestimonials/quotation_icon.webp" alt="Quotation Icon">
+                                </div>
+                                
+                                <p class="text-body-secondary fw-normal">
+                                    Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. 
+                                    Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales.
+                                    Donec sed neque eget.
+                                </p>
+                                
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex align-items-center mt-4">
+                                        <img src="./assets/clientTestimonials/RobertFox.webp" alt="Robert Fox" class="testimonial_img rounded-circle me-3">
+                                        <div>
+                                        <h6 class="mb-0 fw-medium pt-2">Robert Fox</h6>
+                                        <small class="text-muted fw-normal">Customer</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="text-warning fs-4 d-flex pt-4">
+                                        &#9733;&#9733;&#9733;&#9733;&#9733;
+                                    </div>
+                                </div>    
+                            </div>                            
+                        </div>
+                         
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <div class="testimonial_card bg-white rounded-3 shadow-sm p-4 h-100">
+                                <div class="fs-2 mb-2">
+                                    <img src="./assets/clientTestimonials/quotation_icon.webp" alt="Quotation Icon">
+                                </div>
+                                
+                                <p class="text-body-secondary fw-normal">
+                                    Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. 
+                                    Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales.
+                                    Donec sed neque eget.
+                                </p>
+                                
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex align-items-center mt-4">
+                                        <img src="./assets/clientTestimonials/DianneRussell.webp" alt="Dianne Russell" class="testimonial_img rounded-circle me-3">
+                                        <div>
+                                        <h6 class="mb-0 fw-medium pt-2">Dianne Russell</h6>
+                                        <small class="text-muted fw-normal">Customer</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="text-warning fs-4 d-flex pt-4">
+                                        &#9733;&#9733;&#9733;&#9733;&#9733;
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <div class="testimonial_card bg-white rounded-3 shadow-sm p-4 h-100">
+                                <div class="fs-2 mb-2">
+                                    <img src="./assets/clientTestimonials/quotation_icon.webp" alt="Quotation Icon">
+                                </div>
+                                
+                                <p class="text-body-secondary fw-normal">
+                                    Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. 
+                                    Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales.
+                                    Donec sed neque eget.
+                                </p>
+                                
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex align-items-center mt-4">
+                                        <img src="./assets/clientTestimonials/EleanorPena.webp" alt="Eleanor Pena" class="testimonial_img rounded-circle me-3">
+                                        <div>
+                                        <h6 class="mb-0 fw-medium pt-2">Eleanor Pena</h6>
+                                        <small class="text-muted fw-normal">Customer</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="text-warning fs-4 d-flex pt-4">
+                                        &#9733;&#9733;&#9733;&#9733;&#9733;
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>                     
+        </section>
+<!---------------------------Ending of Client Testimonials section------------------------------>
+<!---------------------------Starting of Clients section---------------------------------------->
+        <section class="clients py-3">
+            <div class="container overflow-x-auto py-5">
+                <div class="clients-scroll overflow-x-auto">
+                    <div class="clients-logos d-flex align-items-center justify-content-between flex-wrap flex-lg-nowrap">
+                        <img src="./assets/clients/steps.webp" class="client-img flex justify-content-center align-items-center" alt="Steps Logo">
+                        <span class="text-black-50">|</span>
+                        <img src="./assets/clients/mango.webp" class="client-img flex justify-content-center align-items-center" alt="Mango Logo">
+                        <span class="text-black-50">|</span>
+                        <img src="./assets/clients/food_network.webp" class="client-img flex justify-content-center align-items-center" alt="Food Network Logo">
+                        <span class="text-black-50">|</span>
+                        <img src="./assets/clients/food.webp" class="client-img flex justify-content-center align-items-center" alt="Food Logo">
+                        <span class="text-black-50">|</span>
+                        <img src="./assets/clients/bookoff.webp" class="client-img flex justify-content-center align-items-center" alt="Book-Off Logo">
+                        <span class="text-black-50">|</span>
+                        <img src="./assets/clients/g_series.webp" class="client-img flex justify-content-center align-items-center" alt="G series Logo">                    
+                    </div>
+                </div>    
+            </div>
+        </section>
+<!---------------------------Ending of Clients section-------------------------------------------->
+<!---------------------------Starting of follow Us section---------------------------------------->
+        <section class="follow_us py-4">
+            <h2 class="text-center font-poppins fw-semibold mb-4">Follow us on Instagram</h2>
+            <div class="container d-flex justify-content-center">
+                <div class="overflow-x-auto d-flex gap-3 justify-content-start m-auto px-2 flex-nowrap">                    
+                    <a href="https://instagram.com" target="_blank" class="text-decoration-none">
+                        <div class="follow_imgs position-relative">
+                            <img src="./assets/follow/Instagram_tomato.webp" class="img-fluid rounded" alt="Tomatoes Post">
+                            <img src="./assets/follow/Instagram_icon.webp" class="instagram_icon position-absolute top-50 start-50 translate-middle" alt="Instagram Logo">
+                        </div>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="text-decoration-none">
+                        <div class="follow_imgs position-relative">
+                            <img src="./assets/follow/Instagram_leafs.webp" class="img-fluid rounded" alt="Leafy Green Post">
+                            <img src="./assets/follow/Instagram_icon.webp" class="instagram_icon position-absolute top-50 start-50 translate-middle" alt="Instagram Logo">
+                        </div>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="text-decoration-none">
+                        <div class="follow_imgs position-relative">
+                            <img src="./assets/follow/Instagram_leaf2.webp" class="img-fluid rounded" alt="Leafy Green Post">
+                            <img src="./assets/follow/Instagram_icon.webp" class="instagram_icon position-absolute top-50 start-50 translate-middle" alt="Instagram Logo">
+                        </div>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="text-decoration-none">
+                        <div class="follow_imgs position-relative">
+                            <img src="./assets/follow/Instagram_leaf3.webp" class="img-fluid rounded" alt="Leafy Green Post">
+                            <img src="./assets/follow/Instagram_icon.webp" class="instagram_icon position-absolute top-50 start-50 translate-middle" alt="Instagram Logo">
+                        </div>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="text-decoration-none">
+                        <div class="follow_imgs position-relative">
+                            <img src="./assets/follow/Instagram_pepper.webp" class="img-fluid rounded" alt="Sweet Pepper Post">
+                            <img src="./assets/follow/Instagram_icon.webp" class="instagram_icon position-absolute top-50 start-50 translate-middle" alt="Instagram Logo">
+                        </div>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="text-decoration-none">
+                        <div class="follow_imgs position-relative">
+                            <img src="./assets/follow/Instagram_lemon.webp" class="img-fluid rounded" alt="Lemon Post">
+                            <img src="./assets/follow/Instagram_icon.webp" class="instagram_icon position-absolute top-50 start-50 translate-middle" alt="Instagram Logo">
+                        </div>
+                    </a>
+                </div>    
+            </div>
+        </section>
+<!---------------------------Ending of follow Us section------------------------------------------->
+<!---------------------------Starting of Subcribee section---------------------------------------->
+        <section class="subcribe py-4">
+            <div class="container font-poppins">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-5 col-md-6 mb-3 mb-md-0">
+                        <div class="subcribe_newsletter">
+                            <h3 class="fw-semibold">Subcribe our Newsletter</h3>
+                            <p class="fw-normal text-muted small">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna.</p>
+                        </div>
+                    </div>
+                                    
+                    <div class="col-lg-4 col-md-6 mb-3 mb-md-0">
+                        <form class="subcribe_form d-flex bg-white overflow-hidden">
+                            <input type="email" class="form-control me-2 border-0 flex-grow-1" placeholder="Your email address">
+                            <button type="submit" class="btn bg_mainColor text-white border-0 rounded-pill fw-semibold">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-3 col-12 text-lg-end text-center">
+                        <div class="social">
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f d-inline-flex align-items-center justify-content-center"></i></a>
+                            <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter d-inline-flex align-items-center justify-content-center"></i></a>
+                            <a href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest-p d-inline-flex align-items-center justify-content-center"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram d-inline-flex align-items-center justify-content-center"></i></a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </section>
+    </main>
+<!------------------------------Footer Section---------------------------------------------------->
+    <footer class="footer text-white py-4">
+        <div class="container">
+            <div class="row g-4 justify-content-between">
+                <div class="col-md-4 col-12 d-flex flex-column gap-3 mb-3">
+                    <div class="footer_logo">
+                        <a class="navbar-brand fw-bold" href="./index.html">
+                            <img src="./assets/general/logo_white.webp" alt="Ecobazar Logo" class="me-2">
+                        </a>
+                    </div>
+                    <p class="small text-secondary">Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magna congue nec.</p>
+                    <div class="main_info d-flex gap-3">
+                        <p class="small text-white text-nowrap">(219) 555-0114</p>
+                        <span class="text-secondary">or</span>
+                        <p class="small text-white">Proxy@gmail.com</p>
+                    </div>                    
+                </div>
+                
+                <div class="col-md-8">
+                    <div class="row row-cols-2 row-cols-md-3 g-2">                    
+                        <div class="col-md-3 col-6 right-side">
+                            <h6 class="fw-medium text-white mb-3">My Account</h6>
+                            <ul class="footer_list list-unstyled small fw-normal d-flex flex-column gap-2">
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">My Account</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Order History</a></li>
+                                <li><a href="./shopping_cart.html" target="_blank" class="text-secondary text-decoration-none">Shopping Cart</a></li>
+                                <li><a href="./wishlist.html" target="_blank" class="text-secondary text-decoration-none">Wishlist</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-6 right-side">
+                            <h6 class="fw-medium text-white mb-3">Helps</h6>
+                            <ul class="footer_list list-unstyled small fw-normal d-flex flex-column gap-2">
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Contact</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Faqs</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Terms & Condition</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-6 right-side">
+                            <h6 class="fw-medium text-white mb-3">Proxy</h6>
+                            <ul class="footer_list list-unstyled small fw-normal d-flex flex-column gap-2">
+                                <li><a href="./aboutUs.html" target="_blank" class="text-secondary text-decoration-none">About</a></li>
+                                <li><a href="./shop.html" target="_blank" class="text-secondary text-decoration-none">Shop</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Product</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Track Order</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-6 right-side">
+                            <h6 class="fw-medium text-white mb-3">Categories</h6>
+                            <ul class="footer_list list-unstyled small fw-normal d-flex flex-column gap-2">
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Fruit & Vegetables</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Meat & Fish</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Bread & Bakery</a></li>
+                                <li><a href="#" target="_blank" class="text-secondary text-decoration-none">Beauty & Health</a></li>
+                            </ul>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+
+            
+            <div class="mt-4 border-top d-flex flex-column flex-md-row justify-content-md-between align-items-center text-center text-md-start">
+                <small class="text-secondary">Ecobazar eCommerce © 2021. All Rights Reserved.</small>                                                  
+                <div class="d-flex flex-row flex-wrap justify-content-center justify-content-md-start gap-1">
+                    <a href="https://account.apple.com/sign-in" target="_blank" class="d-flex  flex-row gap-2"><img src="./assets/paymentMethod/ApplePay.webp" alt="Apple Pay" width="32px"></a>
+                    <a href="https://secure.checkout.visa.com/createAccount?channel=destination&niflow=destination&nicmp=destination&locale=en-US&country=US.html" target="_blank" class="d-flex flex-row gap-2"><img src="./assets/paymentMethod/Visa.webp" alt="Visa" width="32px"></a>
+                    <a href="https://bank.discover.com/web/deposits/originations/personal-info/name" target="_blank" class="d-flex flex-row gap-2"><img src="./assets/paymentMethod/Discover.webp" alt="Discover" width="32px"></a>
+                    <a href="https://src.mastercard.com/profile/enroll?cmp=us.en-us.nam.mccom.EnrollInClicktoPay&locale=en_US" target="_blank" class="d-flex  flex-row gap-2"><img src="./assets/paymentMethod/Mastercard.webp" alt="Mastercard" width="32px"></a>
+                    <a href="https://www.secure-payment-services.com/account/login/" target="_blank" class="d-flex  flex-row gap-2"><img src="./assets/paymentMethod/secure-payment.webp" alt="Secure Payment" width="32px"></a>
+                </div>                                
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  </body>
+</html>
