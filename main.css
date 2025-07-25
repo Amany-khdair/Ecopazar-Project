@@ -437,7 +437,7 @@
 }
 /****************************************/
 .summer_sale_BG .disscount_bannar_img{
-    background-image: url('./assets/summer_sale_BG/DiscountBannar.webp');
+    background-image: url('assets/summer_sale_BG/banner.webp');
     padding: 50px 0;
     border-radius: 10px;
     background-size: cover;
