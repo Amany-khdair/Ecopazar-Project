@@ -7,6 +7,17 @@
 .text_mainColor{
     color: #00B207;
 }
+.border_mainColor{
+    border: 1px dashed #00B207;
+}
+.border_mainC{
+    border: 2px solid #00B207;
+}
+.btn_outline_MainColor{
+    color: #00B207;
+    background-color: #fff;
+    border: 2px solid #00B207;
+}
 .top-bar{
     color: #666666;
     font-size: 0.75rem;
@@ -875,7 +886,24 @@
   border-color: #00B207;
   box-shadow: 0 0 0 0.2rem rgba(69, 230, 107, 0.25);
 }
-
+/* =======================Sign In Page Code================================ */
+.sign .card{
+    max-width: 400px; 
+    width: 100%;
+}
+/* ===========================Dashboard Page Code========================== */
+.list_dashboard{
+    transition: all 0.2s ease;
+}
+.list_dashboard:hover{
+    border-inline-start: 3px solid #00B207;
+}
+/* =======================Order Details Page Code========================== */
+.order_tracker .circle_det{
+    width: 30px; 
+    height: 30px; 
+    line-height: 30px;
+}
 
 @media screen and (max-width:750px) {
     :root{
