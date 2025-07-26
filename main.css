@@ -904,7 +904,14 @@
     height: 30px; 
     line-height: 30px;
 }
-
+/* =========================Faqs Page Code================================= */
+.accordion-button{
+    background-color: #F2F2F2;
+}
+.accordion-button:not(.collapsed) {
+    color: #00B207;
+    background-color: #fff;
+}
 @media screen and (max-width:750px) {
     :root{
         font-size: 14px;

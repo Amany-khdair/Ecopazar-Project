@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Ecobazar</title>
+    <!-- Bootstrab 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <header class="header">    
+    <!---------------Top Bar--------------------->
+        <div class="py-2 border-bottom bg-white">
+            <div class="container">
+                <div class="row align-items-center justify-content-between font-poppins top-bar">
+                    <div class="col-md-6">
+                        <div class=" d-flex align-items-center">                    
+                            <img src="./assets/general/MapPin.webp" alt="Location Icon" width="15" height="18" class="me-2">
+                            <span class="location">
+                                Store Location: Lincoln-344, Illinois, Chicago, USA
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="d-flex justify-content-md-end justify-content-center align-items-center gap-3">
+                            <li class="nav-item dropdown list-unstyled">
+                                <a class="nav-link dropdown-toggle me-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    ENG
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item">ENG</li>
+                                    <li class="dropdown-item">AR</li>                                
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown list-unstyled">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    USD
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item">USD</li>
+                                    <li class="dropdown-item">NIS</li>                               
+                                </ul>
+                            </li>
+                            <div class="sign border-start ps-3">
+                                <a href="./sign_in.html" class="ms-2 me-1 text-decoration-none bar-color">Sign In</a> /
+                                <a href="./sign_up.html" class="ms-1 text-decoration-none bar-color">Sign Up</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>                    
+    </header>
+    <!-------------------------------------------------------->
+    <nav class="navbar navbar-expand-lg bg-white py-3 border-bottom position-sticky top-0" style="z-index: 5;">
+        <div class="container font-poppins">                
+            <div class="logo">
+                <a class="navbar-brand fw-bold" href="./index.html">
+                    <img src="./assets/general/Logo.webp" alt="Ecobazar Logo" class="me-2">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-content d-flex flex-wrap justify-content-between align-items-center w-100 gap-3"> 
+                    <div class="search-parent flex-grow-1 mx-3">
+                        <form class="d-flex justify-content-center flex-wrap" role="search">
+                            <div class="search-form d-flex position-relative">
+                                <img src="./assets/general/Search.webp" alt="Search" class="search-icon">
+                                <input class="search-input form-control form-control-sm border-0" type="search" placeholder="Search" aria-label="Search" />
+                                <button class="btn border-0" type="submit">Search</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="user-interaction-icons d-flex align-items-center gap-3">
+                        <a href="./wishlist.html" target="_blank" class="wish-icon border-end pe-3">
+                            <img src="./assets/general/Heart.webp" alt="Wishlist">
+                        </a> 
+                        
+                        <a  class="cart-icon d-flex align-items-center notification position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                            <img src="./assets/general/cart.webp" alt="Shopping Cart">
+                        </a>
+
+                        <div class="shopping-info d-flex flex-column">
+                            <span class="shopping-cart">Shopping cart:</span>
+                            <span class="price fw-medium">$57.00</span>
+                        </div>
+                    </div>
+                </div>  
+            </div>    
+        </div>            
+    </nav>
+    
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Shopping Card (2)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column h-100">
+            <div class="card mb-1" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="off_img_body col-md-3 col-sm-3">
+                        <img src="./assets/popular_products/FreshIndianMalta.webp" class="offcanvas_img img-fluid rounded-start" alt="Fresh Indian Malta">
+                    </div>
+                    <div class="col-md-9 col-sm-9">
+                        <div class="card-body font-poppins d-flex justify-content-between">
+                            <div class="cart_content_offcanvas">
+                                <h5 class="card-title fw-normal">Fresh Indian Orange</h5>
+                                <p class="card-text"><span class="text-secondary">1 kg x </span>12.00</p>
+                            </div>                        
+                            <div class="close_btn">
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" disabled aria-label="Close"></button>  
+                            </div>                                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="off_img_body col-md-3 col-sm-3">
+                        <img src="./assets/popular_products/greenApple.webp" class="offcanvas_img img-fluid rounded-start" alt="Green Apple">
+                    </div>
+                    <div class="col-md-9 col-sm-9">
+                        <div class="card-body font-poppins d-flex justify-content-between">
+                            <div class="cart_content_offcanvas">
+                                <h5 class="card-title fw-normal">Fresh Indian Orange</h5>
+                                <p class="card-text"><span class="text-secondary">1 kg x </span>14.00</p>
+                            </div>                        
+                            <div class="close_btn">
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" disabled aria-label="Close"></button>  
+                            </div>                                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-top pt-3 mt-auto">
+                <div class="card p-3 border-0 w-100">
+                    <div class="d-flex justify-content-between mb-3">
+                        <span class="fw-normal">2 Products</span>
+                        <span class="fw-semibold text-dark">$26.00</span>
+                    </div>
+                    <div class="offCanvas_btns d-flex flex-column gap-2">
+                        <a href="#" target="_blank" class="btn checkout_btn bg_mainColor text-white rounded-pill fw-semibold">Checkout</a>
+                        <a href="#" target="_blank" class="btn go_cart_btn text_mainColor rounded-pill fw-semibold">Go To Cart</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <nav class="list-navbar navbar navbar-expand-lg bg-dark navbar-dark position-sticky" data-bs-theme="dark" style="top: 62px; z-index: 4;">
+        <div class="container font-poppins">                                
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" href="./shop.html">Shop</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link active" href="./error_page.html">Pages</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDownWhite.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" href="./blog.html">Blog</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" href="./aboutUs.html">About Us</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                    <li class="nav-item d-flex">
+                    <a class="nav-link" href="./contact.html">Contact Us</a>
+                    <img class="chevron_img" src="./assets/general/ChevronDown.webp" alt="chevron-down">
+                    </li>
+                </ul>
+                <span class="navbar-text text-white">
+                    <img src="./assets/general/PhoneCall.webp" alt="Phone Call Icon">
+                    (219) 555-0114
+                </span>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
+        <section class="blogs">
+            <div class="blogs_header py-4">   
+                <div class="container d-flex flex-row align-items-center gap-2 font-poppins">
+                    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb"
+                        aria-label="breadcrumb">
+                        <ol class="breadcrumb d-flex flex-row align-items-center gap-2 mb-0">
+                            <li class="breadcrumb-item d-flex align-items-center">
+                                <a href="./index.html">
+                                    <img src="./assets/wishlist_page/home_icon.webp" alt="Home Icon" style="width: 20px; height: 20px;" />
+                                </a>
+                            </li>                                                        
+                            <li class="breadcrumb-item active d-flex align-items-center" aria-current="page">
+                                <span class="fw-normal font-poppins text_mainColor mt-1 fs-6">404 Error Page</span>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container text-center">
+                <div class="error_img">
+                    <img src="./assets/general/error.webp" class="img-fluid" alt="Error Image">
+                </div>
+                <div class="error_content">
+                    <h1 class="fw-semibold">Oops! page not found</h1>
+                    <p class="fs-6 fw-normal text-secondary">Ut consequat ac tortor eu vehicula. Aenean accumsan purus eros. Maecenas sagittis tortor at metus mollis</p>
+                    <a href="./index.html" class="small fw-semibold text-white bg_mainColor p-2 px-4 rounded-pill text-decoration-none">Back to Home</a>
+                </div>
+            </div>
+        </section>
+
+         <section class="subcribe py-4">
+            <div class="container font-poppins">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-5 col-md-6 mb-3 mb-md-0">
+                        <div class="subcribe_newsletter">
+                            <h3 class="fw-semibold">Subcribe our Newsletter</h3>
+                            <p class="fw-normal text-muted small">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna.</p>
+                        </div>
+                    </div>
+                                    
+                    <div class="col-lg-4 col-md-6 mb-3 mb-md-0">
+                        <form class="subcribe_form d-flex bg-white overflow-hidden">
+                            <input type="email" class="form-control me-2 border-0 flex-grow-1" placeholder="Your email address">
+                            <button type="submit" class="btn bg_mainColor text-white border-0 rounded-pill fw-semibold">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-3 col-12 text-lg-end text-center">
+                        <div class="social">
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f d-inline-flex align-items-center justify-content-center"></i></a>
+                            <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter d-inline-flex align-items-center justify-content-center"></i></a>
+                            <a href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest-p d-inline-flex align-items-center justify-content-center"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram d-inline-flex align-items-center justify-content-center"></i></a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer text-white py-4">
+        <div class="container">
+            <div class="row g-4 justify-content-between">
+                <div class="col-md-4 col-12 d-flex flex-column gap-3 mb-3">
+                    <div class="footer_logo">
+                        <a class="navbar-brand fw-bold" href="./index.html">
+                            <img src="./assets/general/logo_white.webp" alt="Ecobazar Logo" class="me-2">
+                        </a>
+                    </div>
+                    <p class="small text-secondary">Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magna congue nec.</p>
+                    <div class="main_info d-flex gap-3">
+                        <p class="small text-white text-nowrap">(219) 555-0114</p>
+                        <span class="text-secondary">or</span>
+                        <p class="small text-white">Proxy@gmail.com</p>
+                    </div>                    
+                </div>
+                
+                <div class="col-md-8">
+                    <div class="row row-cols-2 row-cols-md-3 g-2">                    
+                        <div class="col-md-3 col-6 right-side">
+                            <h6 class="fw-medium text-white mb-3">My Account</h6>
+                            <ul class="footer_list list-unstyled small fw-normal d-flex flex-column gap-2">
+                                <li><a href="./dashboard.html" target="_blank" class="text-secondary text-decoration-none">My Account</a></li>
+                                <li><a href="./order_history.html" target="_blank" class="text-secondary text-decoration-none">Order History</a></li>
+                                <li><a href="./shopping_cart.html" target="_blank" class="text-secondary text-decoration-none">Shopping Cart</a></li>
+                                <li><a href="./wishlist.html" target="_blank" class="text-secondary text-decoration-none">Wishlist</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-6 right-side">
+                            <h6 class="fw-medium text-white mb-3">Helps</h6>
+                            <ul class="footer_list list-unstyled small fw-normal d-flex flex-column gap-2">
+                                <li><a href="./contact.html" target="_blank" class="text-secondary text-decoration-none">Contact</a></li>
+                                <li><a href="./faqs.html" target="_blank" class="text-secondary text-decoration-none">Faqs</a></li>
+                                <li><a href="./faqs.html" target="_blank" class="text-secondary text-decoration-none">Terms & Condition</a></li>
+                                <li><a href="./faqs.html" target="_blank" class="text-secondary text-decoration-none">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-6 right-side">
+                            <h6 class="fw-medium text-white mb-3">Proxy</h6>
+                            <ul class="footer_list list-unstyled small fw-normal d-flex flex-column gap-2">
+                                <li><a href="./aboutUs.html" target="_blank" class="text-secondary text-decoration-none">About</a></li>
+                                <li><a href="./shop.html" target="_blank" class="text-secondary text-decoration-none">Shop</a></li>
+                                <li><a href="./shop.html" target="_blank" class="text-secondary text-decoration-none">Product</a></li>
+                                <li><a href="./order_details.html" target="_blank" class="text-secondary text-decoration-none">Track Order</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-6 right-side">
+                            <h6 class="fw-medium text-white mb-3">Categories</h6>
+                            <ul class="footer_list list-unstyled small fw-normal d-flex flex-column gap-2">
+                                <li><a href="./shop.html" target="_blank" class="text-secondary text-decoration-none">Fruit & Vegetables</a></li>
+                                <li><a href="./shop.html" target="_blank" class="text-secondary text-decoration-none">Meat & Fish</a></li>
+                                <li><a href="./shop.html" target="_blank" class="text-secondary text-decoration-none">Bread & Bakery</a></li>
+                                <li><a href="./shop.html" target="_blank" class="text-secondary text-decoration-none">Beauty & Health</a></li>
+                            </ul>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+
+            
+            <div class="mt-4 border-top d-flex flex-column flex-md-row justify-content-md-between align-items-center text-center text-md-start">
+                <small class="text-secondary">Ecobazar eCommerce © 2021. All Rights Reserved.</small>                                                  
+                <div class="d-flex flex-row flex-wrap justify-content-center justify-content-md-start gap-1">
+                    <a href="https://account.apple.com/sign-in" target="_blank" class="d-flex  flex-row gap-2"><img src="./assets/paymentMethod/ApplePay.webp" alt="Apple Pay" width="32px"></a>
+                    <a href="https://secure.checkout.visa.com/createAccount?channel=destination&niflow=destination&nicmp=destination&locale=en-US&country=US.html" target="_blank" class="d-flex flex-row gap-2"><img src="./assets/paymentMethod/Visa.webp" alt="Visa" width="32px"></a>
+                    <a href="https://bank.discover.com/web/deposits/originations/personal-info/name" target="_blank" class="d-flex flex-row gap-2"><img src="./assets/paymentMethod/Discover.webp" alt="Discover" width="32px"></a>
+                    <a href="https://src.mastercard.com/profile/enroll?cmp=us.en-us.nam.mccom.EnrollInClicktoPay&locale=en_US" target="_blank" class="d-flex  flex-row gap-2"><img src="./assets/paymentMethod/Mastercard.webp" alt="Mastercard" width="32px"></a>
+                    <a href="https://www.secure-payment-services.com/account/login/" target="_blank" class="d-flex  flex-row gap-2"><img src="./assets/paymentMethod/secure-payment.webp" alt="Secure Payment" width="32px"></a>
+                </div>                                
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+</body>
+</html>
