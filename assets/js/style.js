@@ -66,8 +66,12 @@ const customModal = () => {
     if (downBtn) downBtn.addEventListener("click", () => updateImage(currentIndex + 1));
 
     //keyboard events
-    document.addEventListener("keydown", ({code}) =>{
-        if (!myModal.classList.contains("show")) return; //will not work unless the modal is opened
+    document.addEventListener("keydown", (e) =>{
+        const { code } = e;
+        if (!myModal.classList.contains("show")) return;                    //will not work unless the modal is opened
+        if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(code)) {
+            e.preventDefault();
+        }
         if(code == 'ArrowUp' || code == 'ArrowRight'){
             updateImage(currentIndex - 1);
         }else if(code == 'ArrowDown' || code == 'ArrowLeft'){
